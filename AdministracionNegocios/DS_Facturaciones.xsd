@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsFacturaciones" targetNamespace="http://tempuri.org/DsFacturaciones.xsd" xmlns:mstns="http://tempuri.org/DsFacturaciones.xsd" xmlns="http://tempuri.org/DsFacturaciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FacturacionesTableAdapter" GeneratorDataComponentClassName="FacturacionesTableAdapter" Name="Facturaciones" UserDataComponentName="FacturacionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Facturaciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idFacturacion, Periodo, AfiliadosOClientes, TandaDeFacturacion, TipoDeCobranza, Fecha, EntregadaAlCobrador, EntidadDeCobranza, Cobrador, 
+                      Comprobantes, Importe, Entregar
+FROM         View_Facturaciones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idFacturacion" DataSetColumn="idFacturacion" />
+              <Mapping SourceColumn="Periodo" DataSetColumn="Periodo" />
+              <Mapping SourceColumn="AfiliadosOClientes" DataSetColumn="AfiliadosOClientes" />
+              <Mapping SourceColumn="TandaDeFacturacion" DataSetColumn="TandaDeFacturacion" />
+              <Mapping SourceColumn="TipoDeCobranza" DataSetColumn="TipoDeCobranza" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="EntregadaAlCobrador" DataSetColumn="EntregadaAlCobrador" />
+              <Mapping SourceColumn="EntidadDeCobranza" DataSetColumn="EntidadDeCobranza" />
+              <Mapping SourceColumn="Cobrador" DataSetColumn="Cobrador" />
+              <Mapping SourceColumn="Comprobantes" DataSetColumn="Comprobantes" />
+              <Mapping SourceColumn="Importe" DataSetColumn="Importe" />
+              <Mapping SourceColumn="Entregar" DataSetColumn="Entregar" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Facturaciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByProceso" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByProceso" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByProceso">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     View_Facturaciones.idFacturacion, View_Facturaciones.Periodo, View_Facturaciones.AfiliadosOClientes, View_Facturaciones.TandaDeFacturacion, 
+                      View_Facturaciones.TipoDeCobranza, View_Facturaciones.Fecha, View_Facturaciones.EntregadaAlCobrador, View_Facturaciones.EntidadDeCobranza, 
+                      View_Facturaciones.Cobrador, View_Facturaciones.Comprobantes, View_Facturaciones.Importe, View_Facturaciones.Entregar
+FROM         View_Facturaciones INNER JOIN
+                      ids ON View_Facturaciones.idFacturacion = ids.id
+WHERE     (ids.Proceso = @proceso)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="proceso" ColumnName="Proceso" DataSourceName="Datos.dbo.ids" DataTypeServer="varchar(255)" DbType="AnsiString" Direction="Input" ParameterName="@proceso" Precision="0" ProviderType="VarChar" Scale="0" Size="255" SourceColumn="Proceso" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Facturaciones" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillNoEntregadas" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillNoEntregadas" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillNoEntregadas">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AfiliadosOClientes, Cobrador, Comprobantes, EntidadDeCobranza, EntregadaAlCobrador, Entregar, Fecha, Importe, Periodo, TandaDeFacturacion, TipoDeCobranza, idFacturacion FROM View_Facturaciones WHERE (EntregadaAlCobrador IS NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsFacturaciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsFacturaciones" msprop:Generator_UserDSName="DsFacturaciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Facturaciones" msprop:Generator_UserTableName="Facturaciones" msprop:Generator_RowEvArgName="FacturacionesRowChangeEvent" msprop:Generator_TableVarName="tableFacturaciones" msprop:Generator_TablePropName="Facturaciones" msprop:Generator_RowDeletingName="FacturacionesRowDeleting" msprop:Generator_RowChangingName="FacturacionesRowChanging" msprop:Generator_RowDeletedName="FacturacionesRowDeleted" msprop:Generator_TableClassName="FacturacionesDataTable" msprop:Generator_RowChangedName="FacturacionesRowChanged" msprop:Generator_RowEvHandlerName="FacturacionesRowChangeEventHandler" msprop:Generator_RowClassName="FacturacionesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idFacturacion" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidFacturacion" msprop:Generator_ColumnPropNameInRow="idFacturacion" msprop:Generator_ColumnPropNameInTable="idFacturacionColumn" msprop:Generator_UserColumnName="idFacturacion" type="xs:int" />
+              <xs:element name="Periodo" msprop:Generator_ColumnVarNameInTable="columnPeriodo" msprop:Generator_ColumnPropNameInRow="Periodo" msprop:Generator_ColumnPropNameInTable="PeriodoColumn" msprop:Generator_UserColumnName="Periodo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AfiliadosOClientes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAfiliadosOClientes" msprop:Generator_ColumnPropNameInRow="AfiliadosOClientes" msprop:Generator_ColumnPropNameInTable="AfiliadosOClientesColumn" msprop:Generator_UserColumnName="AfiliadosOClientes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TandaDeFacturacion" msprop:Generator_ColumnVarNameInTable="columnTandaDeFacturacion" msprop:Generator_ColumnPropNameInRow="TandaDeFacturacion" msprop:Generator_ColumnPropNameInTable="TandaDeFacturacionColumn" msprop:Generator_UserColumnName="TandaDeFacturacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TipoDeCobranza" msprop:Generator_ColumnVarNameInTable="columnTipoDeCobranza" msprop:Generator_ColumnPropNameInRow="TipoDeCobranza" msprop:Generator_ColumnPropNameInTable="TipoDeCobranzaColumn" msprop:Generator_UserColumnName="TipoDeCobranza" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EntregadaAlCobrador" msprop:Generator_ColumnVarNameInTable="columnEntregadaAlCobrador" msprop:Generator_ColumnPropNameInRow="EntregadaAlCobrador" msprop:Generator_ColumnPropNameInTable="EntregadaAlCobradorColumn" msprop:Generator_UserColumnName="EntregadaAlCobrador" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EntidadDeCobranza" msprop:Generator_ColumnVarNameInTable="columnEntidadDeCobranza" msprop:Generator_ColumnPropNameInRow="EntidadDeCobranza" msprop:Generator_ColumnPropNameInTable="EntidadDeCobranzaColumn" msprop:Generator_UserColumnName="EntidadDeCobranza" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cobrador" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCobrador" msprop:Generator_ColumnPropNameInRow="Cobrador" msprop:Generator_ColumnPropNameInTable="CobradorColumn" msprop:Generator_UserColumnName="Cobrador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comprobantes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnComprobantes" msprop:Generator_ColumnPropNameInRow="Comprobantes" msprop:Generator_ColumnPropNameInTable="ComprobantesColumn" msprop:Generator_UserColumnName="Comprobantes" type="xs:int" minOccurs="0" />
+              <xs:element name="Importe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Entregar" msprop:Generator_ColumnVarNameInTable="columnEntregar" msprop:Generator_ColumnPropNameInRow="Entregar" msprop:Generator_ColumnPropNameInTable="EntregarColumn" msprop:Generator_UserColumnName="Entregar" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Facturaciones" />
+      <xs:field xpath="mstns:idFacturacion" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

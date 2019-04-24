@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsProviDireccionesSinZona" targetNamespace="http://tempuri.org/DsProviDireccionesSinZona.xsd" xmlns:mstns="http://tempuri.org/DsProviDireccionesSinZona.xsd" xmlns="http://tempuri.org/DsProviDireccionesSinZona.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DireccionesSinZonaTableAdapter" GeneratorDataComponentClassName="DireccionesSinZonaTableAdapter" Name="Afiliados" UserDataComponentName="DireccionesSinZonaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.Afiliados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="False" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     Afiliados.NombApel, Afiliados.NumeroDeDocumento
+FROM         Direcciones INNER JOIN
+                      Grupos ON Direcciones.idGrupo = Grupos.idGrupo INNER JOIN
+                      TiposDeCobranza ON Grupos.idTipoDeCobranza = TiposDeCobranza.idTipoDeCobranza INNER JOIN
+                      Afiliados ON Grupos.idGrupo = Afiliados.idGrupo
+WHERE     (Direcciones.Cobranza = 1) AND (Direcciones.idZona IS NULL) AND (TiposDeCobranza.RequiereZonaDeCobranza = 1) AND (Afiliados.Titular = 1)
+GROUP BY Afiliados.NombApel, Afiliados.NumeroDeDocumento</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NombApel" DataSetColumn="NombApel" />
+              <Mapping SourceColumn="NumeroDeDocumento" DataSetColumn="NumeroDeDocumento" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsProviDireccionesSinZona" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsProviDireccionesSinZona" msprop:Generator_DataSetName="DsProviDireccionesSinZona">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Afiliados" msprop:Generator_UserTableName="Afiliados" msprop:Generator_RowDeletedName="AfiliadosRowDeleted" msprop:Generator_TableClassName="AfiliadosDataTable" msprop:Generator_RowChangedName="AfiliadosRowChanged" msprop:Generator_RowClassName="AfiliadosRow" msprop:Generator_RowChangingName="AfiliadosRowChanging" msprop:Generator_RowEvArgName="AfiliadosRowChangeEvent" msprop:Generator_RowEvHandlerName="AfiliadosRowChangeEventHandler" msprop:Generator_TablePropName="Afiliados" msprop:Generator_TableVarName="tableAfiliados" msprop:Generator_RowDeletingName="AfiliadosRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombApel" msdata:ReadOnly="true" msprop:Generator_UserColumnName="NombApel" msprop:Generator_ColumnPropNameInRow="NombApel" msprop:Generator_ColumnVarNameInTable="columnNombApel" msprop:Generator_ColumnPropNameInTable="NombApelColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumeroDeDocumento" msprop:Generator_UserColumnName="NumeroDeDocumento" msprop:Generator_ColumnPropNameInRow="NumeroDeDocumento" msprop:Generator_ColumnVarNameInTable="columnNumeroDeDocumento" msprop:Generator_ColumnPropNameInTable="NumeroDeDocumentoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

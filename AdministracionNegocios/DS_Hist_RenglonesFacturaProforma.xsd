@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsHist_RenglonesFacturaProforma" targetNamespace="http://tempuri.org/DS_Hist_RenglonesFacturaProforma.xsd" xmlns:mstns="http://tempuri.org/DS_Hist_RenglonesFacturaProforma.xsd" xmlns="http://tempuri.org/DS_Hist_RenglonesFacturaProforma.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Hist_RenglonesFacturaProformaTableAdapter" GeneratorDataComponentClassName="View_Hist_RenglonesFacturaProformaTableAdapter" Name="View_Hist_RenglonesFacturaProforma" UserDataComponentName="View_Hist_RenglonesFacturaProformaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Hist_RenglonesFacturaProforma" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        View_Hist_RenglonesFacturaProforma.*
+FROM            View_Hist_RenglonesFacturaProforma</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idHist_RenglonesFacturaProforma" DataSetColumn="idHist_RenglonesFacturaProforma" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="idRenglonFacturaProforma" DataSetColumn="idRenglonFacturaProforma" />
+              <Mapping SourceColumn="Contrato Antarior" DataSetColumn="Contrato Antarior" />
+              <Mapping SourceColumn="Contrato Nuevo" DataSetColumn="Contrato Nuevo" />
+              <Mapping SourceColumn="Plan Anterior" DataSetColumn="Plan Anterior" />
+              <Mapping SourceColumn="Plan Nuevo" DataSetColumn="Plan Nuevo" />
+              <Mapping SourceColumn="Cantidad_anterior" DataSetColumn="Cantidad_anterior" />
+              <Mapping SourceColumn="Cantidad_nuevo" DataSetColumn="Cantidad_nuevo" />
+              <Mapping SourceColumn="PrecioUnitario_anterior" DataSetColumn="PrecioUnitario_anterior" />
+              <Mapping SourceColumn="PrecioUnitario_nuevo" DataSetColumn="PrecioUnitario_nuevo" />
+              <Mapping SourceColumn="RevisarMensualmente_anterior" DataSetColumn="RevisarMensualmente_anterior" />
+              <Mapping SourceColumn="RevisarMensualmente_nuevo" DataSetColumn="RevisarMensualmente_nuevo" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Hist_RenglonesFacturaProforma" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByCliente" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCliente" GeneratorSourceName="FillByCliente" GetMethodModifier="Public" GetMethodName="GetDataByCliente" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCliente" UserSourceName="FillByCliente">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        idHist_RenglonesFacturaProforma, Cliente, idRenglonFacturaProforma, [Contrato Antarior], [Contrato Nuevo], [Plan Anterior], [Plan Nuevo], Cantidad_anterior, 
+                         Cantidad_nuevo, PrecioUnitario_anterior, PrecioUnitario_nuevo, RevisarMensualmente_anterior, RevisarMensualmente_nuevo, Fecha
+FROM            View_Hist_RenglonesFacturaProforma
+WHERE        (Cliente = @Cliente)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Cliente" ColumnName="Cliente" DataSourceName="Datos.dbo.View_Hist_RenglonesFacturaProforma" DataTypeServer="varchar(300)" DbType="AnsiString" Direction="Input" ParameterName="@Cliente" Precision="0" ProviderType="VarChar" Scale="0" Size="300" SourceColumn="Cliente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Hist_RenglonesFacturaProforma" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByFecha" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFecha" GeneratorSourceName="FillByFecha" GetMethodModifier="Public" GetMethodName="GetDataByFecha" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFecha" UserSourceName="FillByFecha">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        idHist_RenglonesFacturaProforma, Cliente, idRenglonFacturaProforma, [Contrato Antarior], [Contrato Nuevo], [Plan Anterior], [Plan Nuevo], Cantidad_anterior, 
+                         Cantidad_nuevo, PrecioUnitario_anterior, PrecioUnitario_nuevo, RevisarMensualmente_anterior, RevisarMensualmente_nuevo, Fecha
+FROM            View_Hist_RenglonesFacturaProforma
+WHERE        (Fecha &gt;= @Fecha)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fecha" ColumnName="Fecha" DataSourceName="Datos.dbo.View_Hist_RenglonesFacturaProforma" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Fecha" Precision="0" ProviderType="DateTime" Scale="0" Size="8" SourceColumn="Fecha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.View_Hist_RenglonesFacturaProforma" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBySinActualizar" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBySinActualizar" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBySinActualizar">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  idHist_RenglonesFacturaProforma
+       ,a.Cliente
+       ,a.idRenglonFacturaProforma
+       ,a.[Contrato Antarior]
+       ,a.[Contrato Nuevo]
+       ,a.[Plan Anterior]
+       ,a.[Plan Nuevo]
+       ,a.Cantidad_anterior
+       ,a.Cantidad_nuevo
+       ,a.PrecioUnitario_anterior
+       ,a.PrecioUnitario_nuevo
+       ,a.RevisarMensualmente_anterior
+       ,a.RevisarMensualmente_nuevo
+       ,a.Fecha
+FROM    View_Hist_RenglonesFacturaProforma a
+        JOIN ( SELECT   b.Cliente
+                       ,b.Fecha
+               FROM     View_Hist_RenglonesFacturaProforma b
+                        JOIN ( SELECT   Cliente
+                                       ,MAX(Fecha) AS mAX_FECHA
+                               FROM     View_Hist_RenglonesFacturaProforma
+                               GROUP BY Cliente
+                             ) c ON b.Cliente = c.Cliente
+                                    AND b.fecha = c.max_fecha
+               WHERE    b.fecha &lt; @fecha
+             ) AS d ON A.Cliente = d.Cliente
+        --JOIN ( SELECT   e.idRenglonFacturaProforma
+        --               ,e.Fecha
+        --       FROM     View_Hist_RenglonesFacturaProforma e
+        --                JOIN ( SELECT   idRenglonFacturaProforma
+        --                               ,MAX(Fecha) AS max_fecha
+        --                       FROM     View_Hist_RenglonesFacturaProforma
+        --                       GROUP BY idRenglonFacturaProforma
+        --                     ) f ON e.idRenglonFacturaProforma = f.idRenglonFacturaProforma
+        --                            AND e.fecha = f.max_fecha
+        --       WHERE    e.fecha &lt; @fecha
+        --     ) AS g ON a.idRenglonFacturaProforma = g.idRenglonFacturaProforma AND a.Fecha = g.Fecha
+        JOIN dbo.RenglonesFacturaProforma rfp ON a.idRenglonFacturaProforma = rfp.idRenglonFacturaProforma
+        JOIN dbo.Contratos cto ON rfp.idContrato = cto.idContrato
+WHERE   idPlan IS NULL
+        AND Estado = 'Activo'
+ORDER BY a.Cliente
+       ,a.idRenglonFacturaProforma
+       ,a.Fecha</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="fecha" ColumnName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@fecha" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsHist_RenglonesFacturaProforma" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsHist_RenglonesFacturaProforma" msprop:Generator_UserDSName="DsHist_RenglonesFacturaProforma">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Hist_RenglonesFacturaProforma" msprop:Generator_TableClassName="View_Hist_RenglonesFacturaProformaDataTable" msprop:Generator_TableVarName="tableView_Hist_RenglonesFacturaProforma" msprop:Generator_TablePropName="View_Hist_RenglonesFacturaProforma" msprop:Generator_RowDeletingName="View_Hist_RenglonesFacturaProformaRowDeleting" msprop:Generator_RowChangingName="View_Hist_RenglonesFacturaProformaRowChanging" msprop:Generator_RowEvHandlerName="View_Hist_RenglonesFacturaProformaRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Hist_RenglonesFacturaProformaRowDeleted" msprop:Generator_UserTableName="View_Hist_RenglonesFacturaProforma" msprop:Generator_RowChangedName="View_Hist_RenglonesFacturaProformaRowChanged" msprop:Generator_RowEvArgName="View_Hist_RenglonesFacturaProformaRowChangeEvent" msprop:Generator_RowClassName="View_Hist_RenglonesFacturaProformaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idHist_RenglonesFacturaProforma" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidHist_RenglonesFacturaProforma" msprop:Generator_ColumnPropNameInRow="idHist_RenglonesFacturaProforma" msprop:Generator_ColumnPropNameInTable="idHist_RenglonesFacturaProformaColumn" msprop:Generator_UserColumnName="idHist_RenglonesFacturaProforma" type="xs:int" />
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idRenglonFacturaProforma" msprop:Generator_ColumnVarNameInTable="columnidRenglonFacturaProforma" msprop:Generator_ColumnPropNameInRow="idRenglonFacturaProforma" msprop:Generator_ColumnPropNameInTable="idRenglonFacturaProformaColumn" msprop:Generator_UserColumnName="idRenglonFacturaProforma" type="xs:int" minOccurs="0" />
+              <xs:element name="Contrato_x0020_Antarior" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnContrato_Antarior" msprop:Generator_ColumnPropNameInRow="Contrato_Antarior" msprop:Generator_ColumnPropNameInTable="Contrato_AntariorColumn" msprop:Generator_UserColumnName="Contrato Antarior" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contrato_x0020_Nuevo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnContrato_Nuevo" msprop:Generator_ColumnPropNameInRow="Contrato_Nuevo" msprop:Generator_ColumnPropNameInTable="Contrato_NuevoColumn" msprop:Generator_UserColumnName="Contrato Nuevo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Plan_x0020_Anterior" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPlan_Anterior" msprop:Generator_ColumnPropNameInRow="Plan_Anterior" msprop:Generator_ColumnPropNameInTable="Plan_AnteriorColumn" msprop:Generator_UserColumnName="Plan Anterior" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Plan_x0020_Nuevo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPlan_Nuevo" msprop:Generator_ColumnPropNameInRow="Plan_Nuevo" msprop:Generator_ColumnPropNameInTable="Plan_NuevoColumn" msprop:Generator_UserColumnName="Plan Nuevo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantidad_anterior" msprop:Generator_ColumnVarNameInTable="columnCantidad_anterior" msprop:Generator_ColumnPropNameInRow="Cantidad_anterior" msprop:Generator_ColumnPropNameInTable="Cantidad_anteriorColumn" msprop:Generator_UserColumnName="Cantidad_anterior" type="xs:int" minOccurs="0" />
+              <xs:element name="Cantidad_nuevo" msprop:Generator_ColumnVarNameInTable="columnCantidad_nuevo" msprop:Generator_ColumnPropNameInRow="Cantidad_nuevo" msprop:Generator_ColumnPropNameInTable="Cantidad_nuevoColumn" msprop:Generator_UserColumnName="Cantidad_nuevo" type="xs:int" minOccurs="0" />
+              <xs:element name="PrecioUnitario_anterior" msprop:Generator_ColumnVarNameInTable="columnPrecioUnitario_anterior" msprop:Generator_ColumnPropNameInRow="PrecioUnitario_anterior" msprop:Generator_ColumnPropNameInTable="PrecioUnitario_anteriorColumn" msprop:Generator_UserColumnName="PrecioUnitario_anterior" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PrecioUnitario_nuevo" msprop:Generator_ColumnVarNameInTable="columnPrecioUnitario_nuevo" msprop:Generator_ColumnPropNameInRow="PrecioUnitario_nuevo" msprop:Generator_ColumnPropNameInTable="PrecioUnitario_nuevoColumn" msprop:Generator_UserColumnName="PrecioUnitario_nuevo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RevisarMensualmente_anterior" msprop:Generator_ColumnVarNameInTable="columnRevisarMensualmente_anterior" msprop:Generator_ColumnPropNameInRow="RevisarMensualmente_anterior" msprop:Generator_ColumnPropNameInTable="RevisarMensualmente_anteriorColumn" msprop:Generator_UserColumnName="RevisarMensualmente_anterior" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RevisarMensualmente_nuevo" msprop:Generator_ColumnVarNameInTable="columnRevisarMensualmente_nuevo" msprop:Generator_ColumnPropNameInRow="RevisarMensualmente_nuevo" msprop:Generator_ColumnPropNameInTable="RevisarMensualmente_nuevoColumn" msprop:Generator_UserColumnName="RevisarMensualmente_nuevo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{74654C90-6E55-447A-9C99-DD02E9BF19A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cabina</RootNamespace>
+    <AssemblyName>Cabina</AssemblyName>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>FBA212E979871E3C7EE70DA3162ADC37459F0DE1</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Cabina_4_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <ApplicationIcon>SK.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\nkeli\Documents\CapasJujuy\Capa Cliente\Cabina\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\10.10.10.2\ActuSyskel\cabina\</UpdateUrl>
+    <TargetCulture>es-AR</TargetCulture>
+    <ProductName>Cabina</ProductName>
+    <PublisherName>SysKel</PublisherName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>4.2.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Shared.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.Misc.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinCalcManager.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinDataSource.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinExplorerBar.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinListView.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinMaskedEdit.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinSchedule.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v11.1, Version=11.1.20111.1003, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CR_TurnoPorFrase.cs">
+      <DependentUpon>CR_TurnoPorFrase.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_InformeAsistencia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_InformeAsistencia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_ReportPago.cs">
+      <DependentUpon>CR_ReportPago.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_Turnos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Turnos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form_Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pago.Designer.cs">
+      <DependentUpon>Form_Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PrestacionesDeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PrestacionesDeClientes.Designer.cs">
+      <DependentUpon>Form_PrestacionesDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Reasignar_Especialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reasignar_Especialidades.Designer.cs">
+      <DependentUpon>Form_Reasignar_Especialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ReferenciaColoresConsultorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ReferenciaColoresConsultorio.Designer.cs">
+      <DependentUpon>Form_ReferenciaColoresConsultorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Grupos.Designer.cs">
+      <DependentUpon>Form_ABC_Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AtenderPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AtenderPacientes.Designer.cs">
+      <DependentUpon>Form_AtenderPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_CtaCte_Prestacion.cs">
+      <DependentUpon>CR_CtaCte_Prestacion.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Form_DarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DarTurnos.Designer.cs">
+      <DependentUpon>Form_DarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EstadoActualDelGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EstadoActualDelGrupo.Designer.cs">
+      <DependentUpon>Form_EstadoActualDelGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GenerarTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GenerarTurnos.Designer.cs">
+      <DependentUpon>Form_GenerarTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Grupos.Designer.cs">
+      <DependentUpon>Form_Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MoldesDeTurnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MoldesDeTurnos.Designer.cs">
+      <DependentUpon>Form_MoldesDeTurnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Feriados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Feriados.Designer.cs">
+      <DependentUpon>Form_ABC_Feriados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DialogoDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DialogoDireccion.Designer.cs">
+      <DependentUpon>Form_DialogoDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RecibirPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RecibirPacientes.Designer.cs">
+      <DependentUpon>Form_RecibirPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Report_TurnosImprimir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Report_TurnosImprimir.Designer.cs">
+      <DependentUpon>Form_Report_TurnosImprimir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rep_TurnosPorFrase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rep_TurnosPorFrase.Designer.cs">
+      <DependentUpon>Form_Rep_TurnosPorFrase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RepPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RepPago.Designer.cs">
+      <DependentUpon>Form_RepPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rep_InformeAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rep_InformeAsistencia.Designer.cs">
+      <DependentUpon>Form_Rep_InformeAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rep_Turnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rep_Turnos.Designer.cs">
+      <DependentUpon>Form_Rep_Turnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TomarProgramado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TomarProgramado.Designer.cs">
+      <DependentUpon>Form_TomarProgramado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_ContadorDePrestaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_ContadorDePrestaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_Caja.cs">
+      <DependentUpon>CR_Caja.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CR_ImprimirPrestacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_ImprimirPrestacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR_Transferencia.cs">
+      <DependentUpon>CR_Transferencia.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FormCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCR.Designer.cs">
+      <DependentUpon>FormCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPacientesIncompletos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPacientesIncompletos.designer.cs">
+      <DependentUpon>FormPacientesIncompletos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Lugares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Lugares.Designer.cs">
+      <DependentUpon>Form_ABC_Lugares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Proveedores.Designer.cs">
+      <DependentUpon>Form_ABC_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_About.Designer.cs">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AtencionesAnteriores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AtencionesAnteriores.Designer.cs">
+      <DependentUpon>Form_AtencionesAnteriores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BuscarContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuscarContrato.Designer.cs">
+      <DependentUpon>Form_BuscarContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BuscarAfiliadoDesdeToma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuscarAfiliadoDesdeToma.Designer.cs">
+      <DependentUpon>Form_BuscarAfiliadoDesdeToma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BuscarAfiliadoDesdeDespacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuscarAfiliadoDesdeDespacho.Designer.cs">
+      <DependentUpon>Form_BuscarAfiliadoDesdeDespacho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Coberturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Coberturas.Designer.cs">
+      <DependentUpon>Form_ABC_Coberturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Diagnosticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Diagnosticos.Designer.cs">
+      <DependentUpon>Form_ABC_Diagnosticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Empleados.Designer.cs">
+      <DependentUpon>Form_ABC_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Medicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Medicamentos.Designer.cs">
+      <DependentUpon>Form_ABC_Medicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_MotivosDeCancelacionPrestacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_MotivosDeCancelacionPrestacion.Designer.cs">
+      <DependentUpon>Form_ABC_MotivosDeCancelacionPrestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_MotivosDeLlamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_MotivosDeLlamado.Designer.cs">
+      <DependentUpon>Form_ABC_MotivosDeLlamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Moviles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Moviles.Designer.cs">
+      <DependentUpon>Form_ABC_Moviles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Practicas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Practicas.Designer.cs">
+      <DependentUpon>Form_ABC_Practicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Prepagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Prepagos.Designer.cs">
+      <DependentUpon>Form_ABC_Prepagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_Recursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_Recursos.Designer.cs">
+      <DependentUpon>Form_ABC_Recursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_TiposDeDestino.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_TiposDeDestino.Designer.cs">
+      <DependentUpon>Form_ABC_TiposDeDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ABC_TiposDeMovil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ABC_TiposDeMovil.Designer.cs">
+      <DependentUpon>Form_ABC_TiposDeMovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BuscarContratoDesdeDespacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuscarContratoDesdeDespacho.Designer.cs">
+      <DependentUpon>Form_BuscarContratoDesdeDespacho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BuscarDireccionYAfiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuscarDireccionYAfiliado.Designer.cs">
+      <DependentUpon>Form_BuscarDireccionYAfiliado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_BuscarPrestaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BuscarPrestaciones.Designer.cs">
+      <DependentUpon>Form_BuscarPrestaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Caja.Designer.cs">
+      <DependentUpon>Form_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CambioDeClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CambioDeClave.Designer.cs">
+      <DependentUpon>Form_CambioDeClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Despacho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Despacho.Designer.cs">
+      <DependentUpon>Form_Despacho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NoTeRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NoTeRegistro.Designer.cs">
+      <DependentUpon>Form_NoTeRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PlanesDelAfiliado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PlanesDelAfiliado.Designer.cs">
+      <DependentUpon>Form_PlanesDelAfiliado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PrincipalCabina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PrincipalCabina.Designer.cs">
+      <DependentUpon>Form_PrincipalCabina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ReferenciaColores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ReferenciaColores.Designer.cs">
+      <DependentUpon>Form_ReferenciaColores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RemesaPrestacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RemesaPrestacion.Designer.cs">
+      <DependentUpon>Form_RemesaPrestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RepTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RepTransferencia.Designer.cs">
+      <DependentUpon>Form_RepTransferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rep_Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rep_Caja.Designer.cs">
+      <DependentUpon>Form_Rep_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rep_ContarPrestaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rep_ContarPrestaciones.Designer.cs">
+      <DependentUpon>Form_Rep_ContarPrestaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rep_ImprimirPrestacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rep_ImprimirPrestacion.Designer.cs">
+      <DependentUpon>Form_Rep_ImprimirPrestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SIEM.Designer.cs">
+      <DependentUpon>Form_SIEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TextoNuevaClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TextoNuevaClave.Designer.cs">
+      <DependentUpon>Form_TextoNuevaClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TomarLlamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TomarLlamado.Designer.cs">
+      <DependentUpon>Form_TomarLlamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Transferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Transferencia.Designer.cs">
+      <DependentUpon>Form_Transferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\WS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CR_TurnoPorFrase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_TurnoPorFrase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_InformeAsistencia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_InformeAsistencia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_ReportPago.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ReportPago.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Turnos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Turnos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pago.resx">
+      <DependentUpon>Form_Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PrestacionesDeClientes.resx">
+      <DependentUpon>Form_PrestacionesDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Reasignar_Especialidades.resx">
+      <DependentUpon>Form_Reasignar_Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ReferenciaColoresConsultorio.resx">
+      <DependentUpon>Form_ReferenciaColoresConsultorio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Grupos.resx">
+      <DependentUpon>Form_ABC_Grupos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AtenderPacientes.resx">
+      <DependentUpon>Form_AtenderPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_CtaCte_Prestacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_CtaCte_Prestacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DarTurnos.resx">
+      <DependentUpon>Form_DarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_EstadoActualDelGrupo.resx">
+      <DependentUpon>Form_EstadoActualDelGrupo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GenerarTurnos.resx">
+      <DependentUpon>Form_GenerarTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Grupos.resx">
+      <DependentUpon>Form_Grupos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MoldesDeTurnos.resx">
+      <DependentUpon>Form_MoldesDeTurnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Coberturas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_Coberturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Diagnosticos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_Diagnosticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Empleados.resx">
+      <DependentUpon>Form_ABC_Empleados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Feriados.resx">
+      <DependentUpon>Form_ABC_Feriados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Medicamentos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_Medicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_MotivosDeCancelacionPrestacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_MotivosDeCancelacionPrestacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_MotivosDeLlamado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_MotivosDeLlamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Moviles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_Moviles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Practicas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_Practicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Prepagos.resx">
+      <DependentUpon>Form_ABC_Prepagos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Recursos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_Recursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_TiposDeDestino.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_TiposDeDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_TiposDeMovil.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ABC_TiposDeMovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Despacho.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Despacho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PrincipalCabina.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_PrincipalCabina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RecibirPacientes.resx">
+      <DependentUpon>Form_RecibirPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Report_TurnosImprimir.resx">
+      <DependentUpon>Form_Report_TurnosImprimir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rep_TurnosPorFrase.resx">
+      <DependentUpon>Form_Rep_TurnosPorFrase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RepPago.resx">
+      <DependentUpon>Form_RepPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rep_InformeAsistencia.resx">
+      <DependentUpon>Form_Rep_InformeAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rep_Turnos.resx">
+      <DependentUpon>Form_Rep_Turnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SIEM.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_SIEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TomarLlamado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TomarLlamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Cabina_1_TemporaryKey.pfx" />
+    <None Include="Cabina_2_TemporaryKey.pfx" />
+    <None Include="Cabina_3_TemporaryKey.pfx" />
+    <None Include="Cabina_4_TemporaryKey.pfx" />
+    <None Include="Cabina_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <None Include="Web References\WS\DsAfiliados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsAfiliados.xsd" />
+    <None Include="Web References\WS\DsAntecedentesConsultorio.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsAntecedentesConsultorio.xsd" />
+    <None Include="Web References\WS\DsArqueos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsArqueos.xsd" />
+    <None Include="Web References\WS\DsAtencionesAnteriores.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsAtencionesAnteriores.xsd" />
+    <None Include="Web References\WS\DsAutorizaciones.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsAutorizaciones.xsd" />
+    <None Include="Web References\WS\DsAutorizacionesDelPuesto.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsAutorizacionesDelPuesto.xsd" />
+    <None Include="Web References\WS\DsAutorizacionesDelUsuario.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsAutorizacionesDelUsuario.xsd" />
+    <None Include="Web References\WS\DsBajasOCambios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBajasOCambios.xsd" />
+    <None Include="Web References\WS\DsBancos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBancos.xsd" />
+    <None Include="Web References\WS\DsBarrios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBarrios.xsd" />
+    <None Include="Web References\WS\DsBuscarAfiliados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarAfiliados.xsd" />
+    <None Include="Web References\WS\DsBuscarAfiliadosActivos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarAfiliadosActivos.xsd" />
+    <None Include="Web References\WS\DsBuscarClientes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarClientes.xsd" />
+    <None Include="Web References\WS\DsBuscarContrato.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarContrato.xsd" />
+    <None Include="Web References\WS\DsBuscarPacientes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarPacientes.xsd" />
+    <None Include="Web References\WS\DsBuscarPlanContrato.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarPlanContrato.xsd" />
+    <None Include="Web References\WS\DsBuscarProveedores.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarProveedores.xsd" />
+    <None Include="Web References\WS\DsBuscarTelefono.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsBuscarTelefono.xsd" />
+    <None Include="Web References\WS\DsCabBuscarTelefono.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCabBuscarTelefono.xsd" />
+    <None Include="Web References\WS\DsCaja.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCaja.xsd" />
+    <None Include="Web References\WS\DsCajas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCajas.xsd" />
+    <None Include="Web References\WS\DsCallesLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCallesLista.xsd" />
+    <None Include="Web References\WS\DsCambiosDeCobrador.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCambiosDeCobrador.xsd" />
+    <None Include="Web References\WS\DsCargos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCargos.xsd" />
+    <None Include="Web References\WS\DsCategoriasIVA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCategoriasIVA.xsd" />
+    <None Include="Web References\WS\DsClientes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsClientes.xsd" />
+    <None Include="Web References\WS\DsClientesConContratoActivoYPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsClientesConContratoActivoYPlan.xsd" />
+    <None Include="Web References\WS\DsClientesLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsClientesLista.xsd" />
+    <None Include="Web References\WS\DsCoberturas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCoberturas.xsd" />
+    <None Include="Web References\WS\DsCodigos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCodigos.xsd" />
+    <None Include="Web References\WS\DsCompra.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCompra.xsd" />
+    <None Include="Web References\WS\DsComprasImpagas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsComprasImpagas.xsd" />
+    <None Include="Web References\WS\DsComprobantePrestacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsComprobantePrestacion.xsd" />
+    <None Include="Web References\WS\DsComprobantes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsComprobantes.xsd" />
+    <None Include="Web References\WS\DsComprobantesDeFacturas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsComprobantesDeFacturas.xsd" />
+    <None Include="Web References\WS\DsComprobantesImpagosCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsComprobantesImpagosCliente.xsd" />
+    <None Include="Web References\WS\DsContratosLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsContratosLista.xsd" />
+    <None Include="Web References\WS\DsCopagos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCopagos.xsd" />
+    <None Include="Web References\WS\DsCuentaCorriente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCuentaCorriente.xsd" />
+    <None Include="Web References\WS\DsCuentaCorrienteProveedor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCuentaCorrienteProveedor.xsd" />
+    <None Include="Web References\WS\DsCUITRepetibles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsCUITRepetibles.xsd" />
+    <None Include="Web References\WS\DsDatosPrestaciones.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDatosPrestaciones.xsd" />
+    <None Include="Web References\WS\DsDescuentosGrupoNumeroso.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDescuentosGrupoNumeroso.xsd" />
+    <None Include="Web References\WS\DsDestinos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDestinos.xsd" />
+    <None Include="Web References\WS\DsDetalleFacturasCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDetalleFacturasCliente.xsd" />
+    <None Include="Web References\WS\DsDeudores.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDeudores.xsd" />
+    <None Include="Web References\WS\DsDiagnosticos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDiagnosticos.xsd" />
+    <None Include="Web References\WS\DsDireccionLugar.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsDireccionLugar.xsd" />
+    <None Include="Web References\WS\DsEmpleados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEmpleados.xsd" />
+    <None Include="Web References\WS\DsEmpleadosLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEmpleadosLista.xsd" />
+    <None Include="Web References\WS\DsEmpresasSueldoBancoMacro.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEmpresasSueldoBancoMacro.xsd" />
+    <None Include="Web References\WS\DsEnCaja.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEnCaja.xsd" />
+    <None Include="Web References\WS\DsEntidadesDeCobranza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEntidadesDeCobranza.xsd" />
+    <None Include="Web References\WS\DsEntidadesSinLiquidar.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEntidadesSinLiquidar.xsd" />
+    <None Include="Web References\WS\DsEstadisticaCantidadDeAfiliados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEstadisticaCantidadDeAfiliados.xsd" />
+    <None Include="Web References\WS\DsEstadisticaPlanes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEstadisticaPlanes.xsd" />
+    <None Include="Web References\WS\DsEstadoActualDelGrupo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEstadoActualDelGrupo.xsd" />
+    <None Include="Web References\WS\DsEstadoDeLaCobranza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsEstadoDeLaCobranza.xsd" />
+    <None Include="Web References\WS\DsExportarImpresionFacturas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsExportarImpresionFacturas.xsd" />
+    <None Include="Web References\WS\DsFacturaciones.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFacturaciones.xsd" />
+    <None Include="Web References\WS\DsFacturadoClientes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFacturadoClientes.xsd" />
+    <None Include="Web References\WS\DsFacturadoYCobrado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFacturadoYCobrado.xsd" />
+    <None Include="Web References\WS\DsFacturaManual.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFacturaManual.xsd" />
+    <None Include="Web References\WS\DsFacturasProFormaDelCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFacturasProFormaDelCliente.xsd" />
+    <None Include="Web References\WS\DsFacturasSinCAE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFacturasSinCAE.xsd" />
+    <None Include="Web References\WS\DsFechasBajasAutomaticas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFechasBajasAutomaticas.xsd" />
+    <None Include="Web References\WS\DsFeriados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsFeriados.xsd" />
+    <None Include="Web References\WS\DsHist_Planes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsHist_Planes.xsd" />
+    <None Include="Web References\WS\DsHist_Recursos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsHist_Recursos.xsd" />
+    <None Include="Web References\WS\DsHist_RenglonesFacturaProforma.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsHist_RenglonesFacturaProforma.xsd" />
+    <None Include="Web References\WS\DsIds.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsIds.xsd" />
+    <None Include="Web References\WS\DsImportarCAE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsImportarCAE.xsd" />
+    <None Include="Web References\WS\DsImportarPadron.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsImportarPadron.xsd" />
+    <None Include="Web References\WS\DsImprimirPrestacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsImprimirPrestacion.xsd" />
+    <None Include="Web References\WS\DsInformeVentas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsInformeVentas.xsd" />
+    <None Include="Web References\WS\DsLicencia.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsLicencia.xsd" />
+    <None Include="Web References\WS\DsLiquidacionEntidad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsLiquidacionEntidad.xsd" />
+    <None Include="Web References\WS\DsListaCambiosDeCobrador.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsListaCambiosDeCobrador.xsd" />
+    <None Include="Web References\WS\DsListaCorreo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsListaCorreo.xsd" />
+    <None Include="Web References\WS\DsLocalidades.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsLocalidades.xsd" />
+    <None Include="Web References\WS\DsLocalidadesLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsLocalidadesLista.xsd" />
+    <None Include="Web References\WS\DsLugares.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsLugares.xsd" />
+    <None Include="Web References\WS\DsLugaresLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsLugaresLista.xsd" />
+    <None Include="Web References\WS\DsMedicamentos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMedicamentos.xsd" />
+    <None Include="Web References\WS\DsMedicosDeCabecera.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMedicosDeCabecera.xsd" />
+    <None Include="Web References\WS\DsMoldesDeTurnos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMoldesDeTurnos.xsd" />
+    <None Include="Web References\WS\DsMotivosDeBaja.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMotivosDeBaja.xsd" />
+    <None Include="Web References\WS\DsMotivosDeCancelacionPrestacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMotivosDeCancelacionPrestacion.xsd" />
+    <None Include="Web References\WS\DsMotivosDeLlamado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMotivosDeLlamado.xsd" />
+    <None Include="Web References\WS\DsMotivosDevolucionCobranza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMotivosDevolucionCobranza.xsd" />
+    <None Include="Web References\WS\DsMoviles.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMoviles.xsd" />
+    <None Include="Web References\WS\DsMovilesLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsMovilesLista.xsd" />
+    <None Include="Web References\WS\DsNegocios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsNegocios.xsd" />
+    <None Include="Web References\WS\DsOcupaciones.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsOcupaciones.xsd" />
+    <None Include="Web References\WS\DsOrdenDePago.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsOrdenDePago.xsd" />
+    <None Include="Web References\WS\DsPacientesIncompletos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPacientesIncompletos.xsd" />
+    <None Include="Web References\WS\DsPacientesPrestacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPacientesPrestacion.xsd" />
+    <None Include="Web References\WS\DsParametros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsParametros.xsd" />
+    <None Include="Web References\WS\DsPersonalPrestacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPersonalPrestacion.xsd" />
+    <None Include="Web References\WS\DsPlanes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPlanes.xsd" />
+    <None Include="Web References\WS\DsPlanesAfiliado.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPlanesAfiliado.xsd" />
+    <None Include="Web References\WS\DsPlanesParaReporte.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPlanesParaReporte.xsd" />
+    <None Include="Web References\WS\DsPlanesPropios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPlanesPropios.xsd" />
+    <None Include="Web References\WS\DsPorcentajeIVA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPorcentajeIVA.xsd" />
+    <None Include="Web References\WS\DsPracticas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPracticas.xsd" />
+    <None Include="Web References\WS\DsPrepagos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrepagos.xsd" />
+    <None Include="Web References\WS\DsPrestacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrestacion.xsd" />
+    <None Include="Web References\WS\DsPrestacionesConSaldo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrestacionesConSaldo.xsd" />
+    <None Include="Web References\WS\DsPrestacionesResumen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrestacionesResumen.xsd" />
+    <None Include="Web References\WS\DsPrestacionesSinCobrador.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrestacionesSinCobrador.xsd" />
+    <None Include="Web References\WS\DsPrestadores.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrestadores.xsd" />
+    <None Include="Web References\WS\DsProtecciones.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsProtecciones.xsd" />
+    <None Include="Web References\WS\DsProveedores.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsProveedores.xsd" />
+    <None Include="Web References\WS\DsProviDireccionesSinZona.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsProviDireccionesSinZona.xsd" />
+    <None Include="Web References\WS\DsProviSinPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsProviSinPlan.xsd" />
+    <None Include="Web References\WS\DsPrueba.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPrueba.xsd" />
+    <None Include="Web References\WS\DsPuestos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPuestos.xsd" />
+    <None Include="Web References\WS\DsPuestosDelUsuario.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPuestosDelUsuario.xsd" />
+    <None Include="Web References\WS\DsPuntosDeVenta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsPuntosDeVenta.xsd" />
+    <None Include="Web References\WS\DsRecursos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRecursos.xsd" />
+    <None Include="Web References\WS\DsRecursosLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRecursosLista.xsd" />
+    <None Include="Web References\WS\DsReintegros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReintegros.xsd" />
+    <None Include="Web References\WS\DsRemesas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRemesas.xsd" />
+    <None Include="Web References\WS\DsRemesasVista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRemesasVista.xsd" />
+    <None Include="Web References\WS\DsRenglonesDeFactura.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRenglonesDeFactura.xsd" />
+    <None Include="Web References\WS\DsRenglonesFacturaLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRenglonesFacturaLista.xsd" />
+    <None Include="Web References\WS\DsRepAfiliadosPorEntidadDeCobranza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepAfiliadosPorEntidadDeCobranza.xsd" />
+    <None Include="Web References\WS\DsRepAumentosAuto.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepAumentosAuto.xsd" />
+    <None Include="Web References\WS\DsRepBajasAutomaticas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepBajasAutomaticas.xsd" />
+    <None Include="Web References\WS\DsRepCambioDeCobrador.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepCambioDeCobrador.xsd" />
+    <None Include="Web References\WS\DsRepCantidadAfiliadosPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepCantidadAfiliadosPlan.xsd" />
+    <None Include="Web References\WS\DsRepConstanciasAfiliacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepConstanciasAfiliacion.xsd" />
+    <None Include="Web References\WS\DsRepFacturasDeClientes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepFacturasDeClientes.xsd" />
+    <None Include="Web References\WS\DsRepIVAVentasAfiliados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepIVAVentasAfiliados.xsd" />
+    <None Include="Web References\WS\DsRepListadoFacturadoPorEntidad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepListadoFacturadoPorEntidad.xsd" />
+    <None Include="Web References\WS\DsRepListadoPorPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepListadoPorPlan.xsd" />
+    <None Include="Web References\WS\DsRepNdeC.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepNdeC.xsd" />
+    <None Include="Web References\WS\DsRepNoUnTitular.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepNoUnTitular.xsd" />
+    <None Include="Web References\WS\DsReportArqueo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReportArqueo.xsd" />
+    <None Include="Web References\WS\DsReportComprobantes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReportComprobantes.xsd" />
+    <None Include="Web References\WS\DsReporteKadicard.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteKadicard.xsd" />
+    <None Include="Web References\WS\DsReporteMacro.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteMacro.xsd" />
+    <None Include="Web References\WS\DsReporteNaranja.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteNaranja.xsd" />
+    <None Include="Web References\WS\DsReporteReintegro.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteReintegro.xsd" />
+    <None Include="Web References\WS\DsReporteRetiro.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteRetiro.xsd" />
+    <None Include="Web References\WS\DsReporteRubrosNegocios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteRubrosNegocios.xsd" />
+    <None Include="Web References\WS\DsReporteTransferencia.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteTransferencia.xsd" />
+    <None Include="Web References\WS\DsReporteVISA.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReporteVISA.xsd" />
+    <None Include="Web References\WS\DsReportExtensionDeCobertura.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReportExtensionDeCobertura.xsd" />
+    <None Include="Web References\WS\DsReportLiquidacionEntidad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReportLiquidacionEntidad.xsd" />
+    <None Include="Web References\WS\DsReportPago.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReportPago.xsd" />
+    <None Include="Web References\WS\DsReportRemesa.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsReportRemesa.xsd" />
+    <None Include="Web References\WS\DsRepPadron.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepPadron.xsd" />
+    <None Include="Web References\WS\DsRepPrestCodigoLocalidad.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepPrestCodigoLocalidad.xsd" />
+    <None Include="Web References\WS\DsRepPrestLocalidadMotivoCodigo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepPrestLocalidadMotivoCodigo.xsd" />
+    <None Include="Web References\WS\DsRepPrestMedicamentosUtilizados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepPrestMedicamentosUtilizados.xsd" />
+    <None Include="Web References\WS\DsRepPuestosAutorizados.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepPuestosAutorizados.xsd" />
+    <None Include="Web References\WS\DsRepRenglonesAFacturar.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepRenglonesAFacturar.xsd" />
+    <None Include="Web References\WS\DsRepResumenPrestacionesPorCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepResumenPrestacionesPorCliente.xsd" />
+    <None Include="Web References\WS\DsRepTasaDeUso.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRepTasaDeUso.xsd" />
+    <None Include="Web References\WS\DsRetiros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRetiros.xsd" />
+    <None Include="Web References\WS\DsRubros.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsRubros.xsd" />
+    <None Include="Web References\WS\DsSistemas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsSistemas.xsd" />
+    <None Include="Web References\WS\DsSolicitudesCAE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsSolicitudesCAE.xsd" />
+    <None Include="Web References\WS\DsTandasDeFacturacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTandasDeFacturacion.xsd" />
+    <None Include="Web References\WS\DsTasaDeUsoAfYCli.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTasaDeUsoAfYCli.xsd" />
+    <None Include="Web References\WS\DsTasaDeUsoClientes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTasaDeUsoClientes.xsd" />
+    <None Include="Web References\WS\DsTerritorios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTerritorios.xsd" />
+    <None Include="Web References\WS\DsTipoDeCobranzaDelGrupo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTipoDeCobranzaDelGrupo.xsd" />
+    <None Include="Web References\WS\DsTiposDeAutorizacion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeAutorizacion.xsd" />
+    <None Include="Web References\WS\DsTiposDeCliente.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeCliente.xsd" />
+    <None Include="Web References\WS\DsTiposDeCobranza.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeCobranza.xsd" />
+    <None Include="Web References\WS\DsTiposDeComprobante.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeComprobante.xsd" />
+    <None Include="Web References\WS\DsTiposDeContrato.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeContrato.xsd" />
+    <None Include="Web References\WS\DsTiposDeDestino.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeDestino.xsd" />
+    <None Include="Web References\WS\DsTiposDeDocumento.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeDocumento.xsd" />
+    <None Include="Web References\WS\DsTiposDeMovil.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeMovil.xsd" />
+    <None Include="Web References\WS\DsTiposDeValores.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTiposDeValores.xsd" />
+    <None Include="Web References\WS\DsTransferencias.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTransferencias.xsd" />
+    <None Include="Web References\WS\DsTurnos.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTurnos.xsd" />
+    <None Include="Web References\WS\DsTurnosImprimir.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsTurnosImprimir.xsd" />
+    <None Include="Web References\WS\DsUsuarios.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsUsuarios.xsd" />
+    <None Include="Web References\WS\DsUsuariosLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsUsuariosLista.xsd" />
+    <None Include="Web References\WS\DsZonas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsZonas.xsd" />
+    <None Include="Web References\WS\DsZonasLista.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WS\DsZonasLista.xsd" />
+    <None Include="Web References\WS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WS\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_BuscarAfiliadoDesdeToma.resx">
+      <DependentUpon>Form_BuscarAfiliadoDesdeToma.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BuscarAfiliadoDesdeDespacho.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_BuscarAfiliadoDesdeDespacho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BuscarDireccionYAfiliado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_BuscarDireccionYAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Fichas\SIEM_001.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_002.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_003.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_004.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_005.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_006.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_007.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_008.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_009.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_010.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_011.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_012.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_013.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_014.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_015.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_016.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_017.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_018.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_019.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_020.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_021.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_022.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_023.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_024.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_025.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_026.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_027.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_028.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_029.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_030.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_031.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_032.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_033.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_034.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_035.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_036.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_037.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_038.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_039.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_040.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_041.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_042.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_043.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_044.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_045.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_046.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_047.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_048.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_049.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_050.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_051.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_052.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_053.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_054.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_055.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_056.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_057.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_058.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_059.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_060.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_061.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_062.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_063.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_064.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_065.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_066.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_067.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_068.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_069.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_070.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_071.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_072.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_073.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_074.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_075.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_076.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_077.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_078.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_079.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_080.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_081.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_082.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_083.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_084.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_085.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_086.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_087.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_088.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_089.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_090.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_091.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_092.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_093.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_094.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_095.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_096.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_097.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_098.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_099.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_100.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_101.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_102.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_103.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_104.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_105.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_106.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_107.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_108.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_109.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_110.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_111.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_112.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_113.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_114.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_115.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_116.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_117.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_118.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_119.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_120.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_121.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_122.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_123.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_124.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_125.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_126.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_127.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_128.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_129.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_130.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_131.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_132.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_133.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_134.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_135.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_136.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_137.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_138.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_139.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_140.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_141.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_142.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_143.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_144.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_145.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_146.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_147.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_148.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_149.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_150.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_151.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_152.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_153.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_154.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_155.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_156.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_157.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_158.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_159.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_160.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_161.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_162.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_163.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_164.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_165.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_166.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_167.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_168.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_169.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_170.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_171.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_172.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_173.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_174.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_175.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_176.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_177.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_178.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_179.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_180.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_181.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_182.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_183.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\SIEM_184.gif">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BuscarContrato.resx">
+      <DependentUpon>Form_BuscarContrato.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CambioDeClave.resx">
+      <DependentUpon>Form_CambioDeClave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NoTeRegistro.resx">
+      <DependentUpon>Form_NoTeRegistro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TextoNuevaClave.resx">
+      <DependentUpon>Form_TextoNuevaClave.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoriaCasan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CR_ImprimirPrestacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ImprimirPrestacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Transferencia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Transferencia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCR.resx">
+      <DependentUpon>FormCR.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Lugares.resx">
+      <DependentUpon>Form_ABC_Lugares.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ABC_Proveedores.resx">
+      <DependentUpon>Form_ABC_Proveedores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AtencionesAnteriores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_AtencionesAnteriores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BuscarPrestaciones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_BuscarPrestaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Caja.resx">
+      <DependentUpon>Form_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PlanesDelAfiliado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_PlanesDelAfiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ReferenciaColores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ReferenciaColores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RemesaPrestacion.resx">
+      <DependentUpon>Form_RemesaPrestacion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RepTransferencia.resx">
+      <DependentUpon>Form_RepTransferencia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rep_Caja.resx">
+      <DependentUpon>Form_Rep_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rep_ImprimirPrestacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Rep_ImprimirPrestacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Transferencia.resx">
+      <DependentUpon>Form_Transferencia.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form_DialogoDireccion.resx">
+      <DependentUpon>Form_DialogoDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TomarProgramado.resx">
+      <DependentUpon>Form_TomarProgramado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_ContadorDePrestaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ContadorDePrestaciones.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Caja.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Caja.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fichas\ReferenciaColores.gif" />
+    <EmbeddedResource Include="FormPacientesIncompletos.resx">
+      <DependentUpon>FormPacientesIncompletos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_About.resx">
+      <DependentUpon>Form_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_BuscarContratoDesdeDespacho.resx">
+      <DependentUpon>Form_BuscarContratoDesdeDespacho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rep_ContarPrestaciones.resx">
+      <DependentUpon>Form_Rep_ContarPrestaciones.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3924545A-F8E2-475A-B1A4-05175BC41E50}" />
+    <Service Include="{5AD368F8-9AD3-4E4C-97D8-1F4F1C124158}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fichas\ReferenciaColoresConsltorio.gif" />
+    <Content Include="IconCentauro.ico" />
+    <Content Include="ManualSysKel.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\WS\Service.disco" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\ReferenciaColoresConsultorio.bmp" />
+    <None Include="Resources\Fondo_activa.jpg" />
+    <None Include="Resources\Fondo_AYMED.jpg" />
+    <None Include="Resources\ReferenciaColoresConsltorio-.jpg" />
+    <None Include="Resources\Fondo_SAE.jpg" />
+    <Content Include="Resources\Logo_Aymed.jpg" />
+    <Content Include="Resources\SK.ico" />
+    <Content Include="SK.ico" />
+    <None Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Shared.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.Misc.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinCalcManager.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinDataSource.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinEditors.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinExplorerBar.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinGrid.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinListView.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinMaskedEdit.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinSchedule.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinStatusBar.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinTabControl.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.UltraWinToolbars.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics2.Win.v11.1">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/SysKel/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WS\</RelPath>
+      <UpdateFromURL>http://localhost/SysKel/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Cabina_AdministracionWS_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdministracionNegocios\AdministracionNegocios.csproj">
+      <Project>{A627986C-B38F-4BC7-B158-C5D082A68E34}</Project>
+      <Name>AdministracionNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

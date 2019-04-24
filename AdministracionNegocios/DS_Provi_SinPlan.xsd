@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsProviSinPlan" targetNamespace="http://tempuri.org/DsProviSinPlan.xsd" xmlns:mstns="http://tempuri.org/DsProviSinPlan.xsd" xmlns="http://tempuri.org/DsProviSinPlan.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProviSinPlanTableAdapter" GeneratorDataComponentClassName="ProviSinPlanTableAdapter" Name="Provi_SinPlan" UserDataComponentName="ProviSinPlanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.Provi_SinPlan" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="False" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT     ApelNomb
+FROM         dbo.Provi_SinPlan() AS Provi_SinPlan_1
+ORDER BY ApelNomb</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ApelNomb" DataSetColumn="ApelNomb" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsProviSinPlan" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsProviSinPlan" msprop:Generator_DataSetName="DsProviSinPlan">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Provi_SinPlan" msprop:Generator_UserTableName="Provi_SinPlan" msprop:Generator_RowDeletedName="Provi_SinPlanRowDeleted" msprop:Generator_RowChangedName="Provi_SinPlanRowChanged" msprop:Generator_RowClassName="Provi_SinPlanRow" msprop:Generator_RowChangingName="Provi_SinPlanRowChanging" msprop:Generator_RowEvArgName="Provi_SinPlanRowChangeEvent" msprop:Generator_RowEvHandlerName="Provi_SinPlanRowChangeEventHandler" msprop:Generator_TableClassName="Provi_SinPlanDataTable" msprop:Generator_TableVarName="tableProvi_SinPlan" msprop:Generator_RowDeletingName="Provi_SinPlanRowDeleting" msprop:Generator_TablePropName="Provi_SinPlan">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ApelNomb" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ApelNomb" msprop:Generator_ColumnVarNameInTable="columnApelNomb" msprop:Generator_ColumnPropNameInRow="ApelNomb" msprop:Generator_ColumnPropNameInTable="ApelNombColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

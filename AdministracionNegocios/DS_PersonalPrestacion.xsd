@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsPersonalPrestacion" targetNamespace="http://tempuri.org/DsPersonalPrestacion.xsd" xmlns:mstns="http://tempuri.org/DsPersonalPrestacion.xsd" xmlns="http://tempuri.org/DsPersonalPrestacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonalPrestacionTableAdapter" GeneratorDataComponentClassName="PersonalPrestacionTableAdapter" Name="PersonalPrestacion" UserDataComponentName="PersonalPrestacionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre AS Cargo
+FROM    dbo.Prestaciones prest
+JOIN    dbo.Destinos dest ON prest.idPrestacion = dest.idPrestacion
+JOIN    dbo.DestinosRecursos dr ON dest.idDestino = dr.idDestino
+JOIN    dbo.Empleados emp ON dr.idMedico1 = emp.idEmpleado
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   prest.idPrestacion = @idPrestacion
+UNION
+SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre
+FROM    dbo.Prestaciones prest
+JOIN    dbo.Destinos dest ON prest.idPrestacion = dest.idPrestacion
+JOIN    dbo.DestinosRecursos dr ON dest.idDestino = dr.idDestino
+JOIN    dbo.Empleados emp ON dr.idMedico2 = emp.idEmpleado
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   prest.idPrestacion = @idPrestacion
+UNION
+SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre
+FROM    dbo.Prestaciones prest
+JOIN    dbo.Destinos dest ON prest.idPrestacion = dest.idPrestacion
+JOIN    dbo.DestinosRecursos dr ON dest.idDestino = dr.idDestino
+JOIN    dbo.Empleados emp ON dr.idParamedico1 = emp.idEmpleado
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   prest.idPrestacion = @idPrestacion
+UNION
+SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre
+FROM    dbo.Prestaciones prest
+JOIN    dbo.Destinos dest ON prest.idPrestacion = dest.idPrestacion
+JOIN    dbo.DestinosRecursos dr ON dest.idDestino = dr.idDestino
+JOIN    dbo.Empleados emp ON dr.idParamedico2 = emp.idEmpleado
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   prest.idPrestacion = @idPrestacion
+UNION
+SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre
+FROM    dbo.Prestaciones prest
+JOIN    dbo.Destinos dest ON prest.idPrestacion = dest.idPrestacion
+JOIN    dbo.DestinosRecursos dr ON dest.idDestino = dr.idDestino
+JOIN    dbo.Empleados emp ON dr.idChofer1 = emp.idEmpleado
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   prest.idPrestacion = @idPrestacion
+UNION
+SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre
+FROM    dbo.Prestaciones prest
+JOIN    dbo.Destinos dest ON prest.idPrestacion = dest.idPrestacion
+JOIN    dbo.DestinosRecursos dr ON dest.idDestino = dr.idDestino
+JOIN    dbo.Empleados emp ON dr.idChofer2 = emp.idEmpleado
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   prest.idPrestacion = @idPrestacion
+UNION
+SELECT  emp.idEmpleado
+       ,emp.ApelNomb
+       ,c.Nombre
+FROM    dbo.Empleados emp
+JOIN    dbo.CargosEmpleados cc ON emp.idEmpleado = cc.idEmpleado
+JOIN    dbo.Cargos c ON c.idCargo = cc.idCargo
+WHERE   emp.idEmpleado = ( SELECT TOP 1
+                                    Caja_Despachador
+                           FROM     Sistemas
+                         )</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="idPrestacion" ColumnName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idPrestacion" Precision="0" Scale="0" Size="4" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
+              <Mapping SourceColumn="ApelNomb" DataSetColumn="ApelNomb" />
+              <Mapping SourceColumn="Cargo" DataSetColumn="Cargo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsPersonalPrestacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsPersonalPrestacion" msprop:Generator_UserDSName="DsPersonalPrestacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PersonalPrestacion" msprop:Generator_TableClassName="PersonalPrestacionDataTable" msprop:Generator_RowEvArgName="PersonalPrestacionRowChangeEvent" msprop:Generator_TableVarName="tablePersonalPrestacion" msprop:Generator_TablePropName="PersonalPrestacion" msprop:Generator_RowDeletingName="PersonalPrestacionRowDeleting" msprop:Generator_RowChangingName="PersonalPrestacionRowChanging" msprop:Generator_RowDeletedName="PersonalPrestacionRowDeleted" msprop:Generator_RowEvHandlerName="PersonalPrestacionRowChangeEventHandler" msprop:Generator_RowChangedName="PersonalPrestacionRowChanged" msprop:Generator_UserTableName="PersonalPrestacion" msprop:Generator_RowClassName="PersonalPrestacionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idEmpleado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" minOccurs="0" />
+              <xs:element name="ApelNomb" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApelNomb" msprop:Generator_ColumnPropNameInRow="ApelNomb" msprop:Generator_ColumnPropNameInTable="ApelNombColumn" msprop:Generator_UserColumnName="ApelNomb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cargo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_UserColumnName="Cargo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

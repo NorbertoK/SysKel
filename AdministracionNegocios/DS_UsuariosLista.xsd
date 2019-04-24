@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsUsuariosLista" targetNamespace="http://tempuri.org/DsUsuariosLista.xsd" xmlns:mstns="http://tempuri.org/DsUsuariosLista.xsd" xmlns="http://tempuri.org/DsUsuariosLista.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosListaTableAdapter" GeneratorDataComponentClassName="UsuariosListaTableAdapter" Name="UsuariosLista" UserDataComponentName="UsuariosListaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     idUsuario, Activo, NombApel, ApelNomb, Iniciales, idEmpleado
+FROM         Usuarios
+ORDER BY ApelNomb</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idUsuario" DataSetColumn="idUsuario" />
+              <Mapping SourceColumn="Activo" DataSetColumn="Activo" />
+              <Mapping SourceColumn="NombApel" DataSetColumn="NombApel" />
+              <Mapping SourceColumn="ApelNomb" DataSetColumn="ApelNomb" />
+              <Mapping SourceColumn="Iniciales" DataSetColumn="Iniciales" />
+              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsUsuariosLista" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsUsuariosLista" msprop:Generator_UserDSName="DsUsuariosLista">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UsuariosLista" msprop:Generator_UserTableName="UsuariosLista" msprop:Generator_RowEvArgName="UsuariosListaRowChangeEvent" msprop:Generator_TableVarName="tableUsuariosLista" msprop:Generator_TablePropName="UsuariosLista" msprop:Generator_RowDeletingName="UsuariosListaRowDeleting" msprop:Generator_RowChangingName="UsuariosListaRowChanging" msprop:Generator_RowDeletedName="UsuariosListaRowDeleted" msprop:Generator_TableClassName="UsuariosListaDataTable" msprop:Generator_RowChangedName="UsuariosListaRowChanged" msprop:Generator_RowEvHandlerName="UsuariosListaRowChangeEventHandler" msprop:Generator_RowClassName="UsuariosListaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidUsuario" msprop:Generator_ColumnPropNameInRow="idUsuario" msprop:Generator_ColumnPropNameInTable="idUsuarioColumn" msprop:Generator_UserColumnName="idUsuario" type="xs:int" />
+              <xs:element name="Activo" msprop:Generator_ColumnVarNameInTable="columnActivo" msprop:Generator_ColumnPropNameInRow="Activo" msprop:Generator_ColumnPropNameInTable="ActivoColumn" msprop:Generator_UserColumnName="Activo" type="xs:boolean" />
+              <xs:element name="NombApel" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombApel" msprop:Generator_ColumnPropNameInRow="NombApel" msprop:Generator_ColumnPropNameInTable="NombApelColumn" msprop:Generator_UserColumnName="NombApel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApelNomb" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApelNomb" msprop:Generator_ColumnPropNameInRow="ApelNomb" msprop:Generator_ColumnPropNameInTable="ApelNombColumn" msprop:Generator_UserColumnName="ApelNomb" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Iniciales" msprop:Generator_ColumnVarNameInTable="columnIniciales" msprop:Generator_ColumnPropNameInRow="Iniciales" msprop:Generator_ColumnPropNameInTable="InicialesColumn" msprop:Generator_UserColumnName="Iniciales" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEmpleado" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UsuariosLista" />
+      <xs:field xpath="mstns:idUsuario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

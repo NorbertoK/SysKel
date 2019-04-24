@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsListaCambiosDeCobrador" targetNamespace="http://tempuri.org/DS_ListaCambiosDeCobrador.xsd" xmlns:mstns="http://tempuri.org/DS_ListaCambiosDeCobrador.xsd" xmlns="http://tempuri.org/DS_ListaCambiosDeCobrador.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ListaCambioDeCobradorTableAdapter" GeneratorDataComponentClassName="ListaCambioDeCobradorTableAdapter" Name="ListaCambioDeCobrador" UserDataComponentName="ListaCambioDeCobradorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  idCambioDeCobrador,
+        Fecha,
+        cob1.ApelNomb De,
+        cob2.ApelNomb A,
+        Motivo,
+        z.Nombre Zona,
+        ( SELECT    COUNT(*)
+          FROM      dbo.ComprobantesCambioDeCobrador
+          WHERE     idCambioDeCobrador = cc.idCambioDeCobrador
+        ) Cantidad,
+        CambiarFuturo [Cambiar Futuro]
+FROM    CambiosDeCobrador cc
+        LEFT JOIN dbo.Empleados cob1 on cc.idCobrador1 = cob1.idEmpleado
+        LEFT JOIN dbo.Empleados cob2 on cc.idCobrador2 = cob2.idEmpleado
+        LEFT JOIN dbo.Zonas z on cc.idZona = z.idZona
+ORDER BY idCambioDeCobrador</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idCambioDeCobrador" DataSetColumn="idCambioDeCobrador" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="Motivo" DataSetColumn="Motivo" />
+              <Mapping SourceColumn="Zona" DataSetColumn="Zona" />
+              <Mapping SourceColumn="De" DataSetColumn="De" />
+              <Mapping SourceColumn="A" DataSetColumn="A" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Cambiar Futuro" DataSetColumn="Cambiar Futuro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsListaCambiosDeCobrador" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsListaCambiosDeCobrador" msprop:Generator_DataSetName="DsListaCambiosDeCobrador" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListaCambioDeCobrador" msprop:Generator_UserTableName="ListaCambioDeCobrador" msprop:Generator_RowDeletedName="ListaCambioDeCobradorRowDeleted" msprop:Generator_RowChangedName="ListaCambioDeCobradorRowChanged" msprop:Generator_RowClassName="ListaCambioDeCobradorRow" msprop:Generator_RowChangingName="ListaCambioDeCobradorRowChanging" msprop:Generator_RowEvArgName="ListaCambioDeCobradorRowChangeEvent" msprop:Generator_RowEvHandlerName="ListaCambioDeCobradorRowChangeEventHandler" msprop:Generator_TableClassName="ListaCambioDeCobradorDataTable" msprop:Generator_TableVarName="tableListaCambioDeCobrador" msprop:Generator_RowDeletingName="ListaCambioDeCobradorRowDeleting" msprop:Generator_TablePropName="ListaCambioDeCobrador">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idCambioDeCobrador" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="idCambioDeCobrador" msprop:Generator_ColumnVarNameInTable="columnidCambioDeCobrador" msprop:Generator_ColumnPropNameInRow="idCambioDeCobrador" msprop:Generator_ColumnPropNameInTable="idCambioDeCobradorColumn" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_UserColumnName="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" type="xs:dateTime" />
+              <xs:element name="Motivo" msprop:Generator_UserColumnName="Motivo" msprop:Generator_ColumnVarNameInTable="columnMotivo" msprop:Generator_ColumnPropNameInRow="Motivo" msprop:Generator_ColumnPropNameInTable="MotivoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Zona" msprop:Generator_UserColumnName="Zona" msprop:Generator_ColumnVarNameInTable="columnZona" msprop:Generator_ColumnPropNameInRow="Zona" msprop:Generator_ColumnPropNameInTable="ZonaColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="De" msdata:ReadOnly="true" msprop:Generator_UserColumnName="De" msprop:Generator_ColumnVarNameInTable="columnDe" msprop:Generator_ColumnPropNameInRow="De" msprop:Generator_ColumnPropNameInTable="DeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="A" msdata:ReadOnly="true" msprop:Generator_UserColumnName="A" msprop:Generator_ColumnVarNameInTable="columnA" msprop:Generator_ColumnPropNameInRow="A" msprop:Generator_ColumnPropNameInTable="AColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="102" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantidad" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Cambiar_x0020_Futuro" msprop:Generator_UserColumnName="Cambiar Futuro" msprop:Generator_ColumnVarNameInTable="columnCambiar_Futuro" msprop:Generator_ColumnPropNameInRow="Cambiar_Futuro" msprop:Generator_ColumnPropNameInTable="Cambiar_FuturoColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ListaCambioDeCobrador" />
+      <xs:field xpath="mstns:idCambioDeCobrador" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

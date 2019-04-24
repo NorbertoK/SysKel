@@ -1,0 +1,4266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A627986C-B38F-4BC7-B158-C5D082A68E34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Administración</RootNamespace>
+    <AssemblyName>AdministracionNegocios</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/AdministracionNegocios/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmp_ABC_Autorizaciones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Autorizaciones.Designer.cs">
+      <DependentUpon>cmp_ABC_Autorizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Bancos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Bancos.Designer.cs">
+      <DependentUpon>cmp_ABC_Bancos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_CUITRepetibles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_CUITRepetibles.Designer.cs">
+      <DependentUpon>cmp_ABC_CUITRepetibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_MedicosDeCabecera.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_MedicosDeCabecera.Designer.cs">
+      <DependentUpon>cmp_ABC_MedicosDeCabecera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Ocupaciones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Ocupaciones.Designer.cs">
+      <DependentUpon>cmp_ABC_Ocupaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Proveedores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Proveedores.Designer.cs">
+      <DependentUpon>cmp_ABC_Proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Puestos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Puestos.Designer.cs">
+      <DependentUpon>cmp_ABC_Puestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_PuestosDelUsuario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_PuestosDelUsuario.Designer.cs">
+      <DependentUpon>cmp_ABC_PuestosDelUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Sistemas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Sistemas.Designer.cs">
+      <DependentUpon>cmp_ABC_Sistemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TandasDeFacturacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TandasDeFacturacion.Designer.cs">
+      <DependentUpon>cmp_ABC_TandasDeFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeAutorizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeAutorizacion.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Arqueo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Arqueo.Designer.cs">
+      <DependentUpon>cmp_Arqueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_BajasOCambios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_BajasOCambios.Designer.cs">
+      <DependentUpon>cmp_BajasOCambios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_Consultorios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_Consultorios.Designer.cs">
+      <DependentUpon>cmp_cab_Consultorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_Prestaciones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_Prestaciones.Designer.cs">
+      <DependentUpon>cmp_cab_Prestaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Caja.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Caja.Designer.cs">
+      <DependentUpon>cmp_Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Deudores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Deudores.Designer.cs">
+      <DependentUpon>cmp_Deudores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_EstadoDeLaCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_EstadoDeLaCobranza.Designer.cs">
+      <DependentUpon>cmp_EstadoDeLaCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Facturaciones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Facturaciones.Designer.cs">
+      <DependentUpon>cmp_Facturaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Compra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Compra.Designer.cs">
+      <DependentUpon>cmp_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_RenglonesFP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_RenglonesFP.Designer.cs">
+      <DependentUpon>cmp_RenglonesFP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReporteExtensionDeCobertura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReporteExtensionDeCobertura.Designer.cs">
+      <DependentUpon>cmp_ReporteExtensionDeCobertura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Clientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Clientes.Designer.cs">
+      <DependentUpon>cmp_ABC_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Empleados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Empleados.Designer.cs">
+      <DependentUpon>cmp_ABC_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Grupos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Grupos.Designer.cs">
+      <DependentUpon>cmp_ABC_Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Lugares.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Lugares.Designer.cs">
+      <DependentUpon>cmp_ABC_Lugares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_MotivosDevolucionCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_MotivosDevolucionCobranza.Designer.cs">
+      <DependentUpon>cmp_ABC_MotivosDevolucionCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Parametros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Parametros.Designer.cs">
+      <DependentUpon>cmp_ABC_Parametros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeContrato.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeContrato.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_AutorizacionesDelPuesto.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_AutorizacionesDelPuesto.Designer.cs">
+      <DependentUpon>cmp_AutorizacionesDelPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Coberturas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Coberturas.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_Coberturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Medicamentos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Medicamentos.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_Medicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_MotivosDeCancelacionPrestacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_MotivosDeCancelacionPrestacion.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_MotivosDeCancelacionPrestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_MotivosDeLlamado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_MotivosDeLlamado.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_MotivosDeLlamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Moviles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Moviles.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_Moviles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Practicas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Practicas.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_Practicas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Recursos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Recursos.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_Recursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_TiposDeDestino.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_TiposDeDestino.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_TiposDeDestino.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ImprimirPrestacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ImprimirPrestacion.Designer.cs">
+      <DependentUpon>cmp_cab_ImprimirPrestacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_TomarLlamado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_TomarLlamado.Designer.cs">
+      <DependentUpon>cmp_cab_TomarLlamado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Diagnosticos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_Diagnosticos.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_Diagnosticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_TiposDeMovil.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_cab_ABC_TiposDeMovil.Designer.cs">
+      <DependentUpon>cmp_cab_ABC_TiposDeMovil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_CambioDeClave.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_CambioDeClave.Designer.cs">
+      <DependentUpon>cmp_CambioDeClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_CambioDeGrupo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_CambioDeGrupo.Designer.cs">
+      <DependentUpon>cmp_CambioDeGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_CambiosDeCobrador.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_CambiosDeCobrador.Designer.cs">
+      <DependentUpon>cmp_CambiosDeCobrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ConstanciasDeAfiliacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ConstanciasDeAfiliacion.Designer.cs">
+      <DependentUpon>cmp_ConstanciasDeAfiliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_EstadoActualDelGrupo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_EstadoActualDelGrupo.Designer.cs">
+      <DependentUpon>cmp_EstadoActualDelGrupo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_FacturacionMensualAfiliados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_FacturacionMensualAfiliados.Designer.cs">
+      <DependentUpon>cmp_FacturacionMensualAfiliados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_FacturaManual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_FacturaManual.Designer.cs">
+      <DependentUpon>cmp_FacturaManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Grupos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Grupos.Designer.cs">
+      <DependentUpon>cmp_Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Prepagos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Prepagos.Designer.cs">
+      <DependentUpon>cmp_ABC_Prepagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Codigos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Codigos.Designer.cs">
+      <DependentUpon>cmp_ABC_Codigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_EntidadesDeCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_EntidadesDeCobranza.Designer.cs">
+      <DependentUpon>cmp_ABC_EntidadesDeCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_MotivosDeBaja.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_MotivosDeBaja.Designer.cs">
+      <DependentUpon>cmp_ABC_MotivosDeBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_PlanesPropios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_PlanesPropios.Designer.cs">
+      <DependentUpon>cmp_ABC_PlanesPropios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Prestadores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Prestadores.Designer.cs">
+      <DependentUpon>cmp_ABC_Prestadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_PuntosDeVenta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_PuntosDeVenta.Designer.cs">
+      <DependentUpon>cmp_ABC_PuntosDeVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Territorios.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Territorios.Designer.cs">
+      <DependentUpon>cmp_ABC_Territorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_CategoriasIva.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_CategoriasIva.Designer.cs">
+      <DependentUpon>cmp_ABC_CategoriasIva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeCliente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeCliente.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeCobranza.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeComprobante.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeComprobante.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeDocumento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeDocumento.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeValores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_TiposDeValores.Designer.cs">
+      <DependentUpon>cmp_ABC_TiposDeValores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ABC_Zonas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ABC_Zonas.Designer.cs">
+      <DependentUpon>cmp_ABC_Zonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CmpClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CmpClientes.Designer.cs">
+      <DependentUpon>CmpClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Login.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Login.Designer.cs">
+      <DependentUpon>cmp_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_NuevoUsuario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_NuevoUsuario.Designer.cs">
+      <DependentUpon>cmp_NuevoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Principal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Principal.Designer.cs">
+      <DependentUpon>cmp_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Provi_DireccionesSinZona.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Provi_DireccionesSinZona.Designer.cs">
+      <DependentUpon>cmp_Provi_DireccionesSinZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_prueba.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_prueba.designer.cs">
+      <DependentUpon>cmp_prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Remesa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Remesa.Designer.cs">
+      <DependentUpon>cmp_Remesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReporteArqueo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReporteArqueo.Designer.cs">
+      <DependentUpon>cmp_ReporteArqueo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReporteCupones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReporteCupones.Designer.cs">
+      <DependentUpon>cmp_ReporteCupones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReporteNdeC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReporteNdeC.Designer.cs">
+      <DependentUpon>cmp_ReporteNdeC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReporteRemesa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReporteRemesa.Designer.cs">
+      <DependentUpon>cmp_ReporteRemesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReportesAfiliados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReportesAfiliados.designer.cs">
+      <DependentUpon>cmp_ReportesAfiliados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_ReporteVISA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_ReporteVISA.Designer.cs">
+      <DependentUpon>cmp_ReporteVISA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_rep_AfiliadosPorEntidadDeCobranza.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_rep_AfiliadosPorEntidadDeCobranza.Designer.cs">
+      <DependentUpon>cmp_rep_AfiliadosPorEntidadDeCobranza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_rep_CantidadAfiliadosPlan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_rep_CantidadAfiliadosPlan.Designer.cs">
+      <DependentUpon>cmp_rep_CantidadAfiliadosPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_Rep_EstPrest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_Rep_EstPrest.Designer.cs">
+      <DependentUpon>cmp_Rep_EstPrest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_rep_FacturasDeClientes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_rep_FacturasDeClientes.Designer.cs">
+      <DependentUpon>cmp_rep_FacturasDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_rep_Padron.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_rep_Padron.Designer.cs">
+      <DependentUpon>cmp_rep_Padron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_rep_RenglonesAFacturar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_rep_RenglonesAFacturar.Designer.cs">
+      <DependentUpon>cmp_rep_RenglonesAFacturar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmp_rep_CuentaCorriente.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cmp_rep_CuentaCorriente.Designer.cs">
+      <DependentUpon>cmp_rep_CuentaCorriente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarAfiliadosActivos.cs">
+      <DependentUpon>DS_BuscarAfiliadosActivos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarContrato.cs">
+      <DependentUpon>DS_BuscarContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarProveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMovilesLista1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMovilesLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPacientesIncompletos1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPacientesIncompletos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZonasLista1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSZonasLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Afiliados.cs">
+      <DependentUpon>DS_Afiliados.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Afiliados.Designer.cs">
+      <DependentUpon>DS_Afiliados.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_AntecedentesConsultorio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AntecedentesConsultorio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Arqueos.cs">
+      <DependentUpon>DS_Arqueos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Arqueos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Arqueos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AtencionesAnteriores.cs">
+      <DependentUpon>DS_AtencionesAnteriores.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_AtencionesAnteriores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AtencionesAnteriores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Autorizaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Autorizaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AutorizacionesDelPuesto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AutorizacionesDelPuesto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_AutorizacionesDelUsuario.cs">
+      <DependentUpon>DS_AutorizacionesDelUsuario.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_AutorizacionesDelUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_AutorizacionesDelUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BajasOCambios.cs">
+      <DependentUpon>DS_BajasOCambios.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_BajasOCambios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BajasOCambios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Bancos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Bancos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Barrios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Barrios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarAfiliados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarAfiliados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarAfiliadosActivos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarAfiliadosActivos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarContrato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarPacientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarPacientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarPlanContrato.cs">
+      <DependentUpon>DS_BuscarPlanContrato.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_BuscarPlanContrato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarPlanContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_BuscarTelefono.cs">
+      <DependentUpon>DS_BuscarTelefono.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_BuscarTelefono.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_BuscarTelefono.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_cab_BuscarTelefono.cs">
+      <DependentUpon>DS_cab_BuscarTelefono.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_cab_BuscarTelefono.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_cab_BuscarTelefono.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Caja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Caja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Cajas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Cajas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CallesLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CallesLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CambiosDeCobrador.cs">
+      <DependentUpon>DS_CambiosDeCobrador.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_CambiosDeCobrador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CambiosDeCobrador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Cargos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CategoriasIVA.Designer.cs">
+      <DependentUpon>DS_CategoriasIVA.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Clientes.cs">
+      <DependentUpon>DS_Clientes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Clientes.Designer.cs">
+      <DependentUpon>DS_Clientes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_ClientesConContratoActivoYPlan.cs">
+      <DependentUpon>DS_ClientesConContratoActivoYPlan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ClientesConContratoActivoYPlan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ClientesConContratoActivoYPlan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ClientesLista.cs">
+      <DependentUpon>DS_ClientesLista.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ClientesLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ClientesLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Coberturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Coberturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Codigos.Designer.cs">
+      <DependentUpon>DS_Codigos.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Compra.cs">
+      <DependentUpon>DS_Compra.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ComprobantePrestacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ComprobantePrestacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Comprobantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Comprobantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ComprobantesDeFacturas.cs">
+      <DependentUpon>DS_ComprobantesDeFacturas.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ComprobantesDeFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ComprobantesDeFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ComprasImpagas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ComprasImpagas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ComprobantesImpagosCliente.cs">
+      <DependentUpon>DS_ComprobantesImpagosCliente.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ComprobantesImpagosCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ComprobantesImpagosCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ContratosLista.cs">
+      <DependentUpon>DS_ContratosLista.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ContratosLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ContratosLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Copagos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Copagos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CuentaCorriente.cs">
+      <DependentUpon>DS_CuentaCorriente.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_CuentaCorriente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CuentaCorriente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CuentaCorrienteProveedor.cs">
+      <DependentUpon>DS_CuentaCorrienteProveedor.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_CuentaCorrienteProveedor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CuentaCorrienteProveedor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_CUITRepetibles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_CUITRepetibles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DatosPrestaciones.cs">
+      <DependentUpon>DS_DatosPrestaciones.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_DatosPrestaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DatosPrestaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DescuentosGrupoNumeroso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DescuentosGrupoNumeroso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Destinos.cs">
+      <DependentUpon>DS_Destinos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Destinos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Destinos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DetalleFacturasCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_DetalleFacturasCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Deudores.cs">
+      <DependentUpon>DS_Deudores.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Deudores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Deudores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Diagnosticos.cs">
+      <DependentUpon>DS_Diagnosticos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Diagnosticos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Diagnosticos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_DireccionLugar.cs">
+      <DependentUpon>DS_DireccionLugar.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_DireccionLugar.Designer.cs">
+      <DependentUpon>DS_DireccionLugar.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Empleados.cs">
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Empleados.Designer.cs">
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_EmpleadosLista.cs">
+      <DependentUpon>DS_EmpleadosLista.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_EmpleadosLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpleadosLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EmpresasSueldoBancoMacro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EmpresasSueldoBancoMacro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EnCaja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EnCaja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EntidadesDeCobranza.Designer.cs">
+      <DependentUpon>DS_EntidadesDeCobranza.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_EntidadesSinLiquidar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EntidadesSinLiquidar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EstadisticaCantidadDeAfiliados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EstadisticaCantidadDeAfiliados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EstadisticaPlanes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EstadisticaPlanes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EstadoActualDelGrupo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EstadoActualDelGrupo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_EstadoDeLaCobranza.cs">
+      <DependentUpon>DS_EstadoDeLaCobranza.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_EstadoDeLaCobranza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_EstadoDeLaCobranza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ExportarImpresionFacturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ExportarImpresionFacturas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Facturaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Facturaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_FacturadoClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_FacturadoClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_FacturadoYCobrado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_FacturadoYCobrado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_FacturaManual.cs">
+      <DependentUpon>DS_FacturaManual.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_FacturaManual.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_FacturaManual.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_FacturasProformaDelCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_FacturasProformaDelCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_FacturasSinCAE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_FacturasSinCAE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_FechasBajasAutomaticas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_FechasBajasAutomaticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Feriados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Feriados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Hist_Planes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Hist_Planes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Hist_Recursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Hist_Recursos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Hist_RenglonesFacturaProforma.cs">
+      <DependentUpon>DS_Hist_RenglonesFacturaProforma.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Hist_RenglonesFacturaProforma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Hist_RenglonesFacturaProforma.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Ids.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Ids.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ImportarCAE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ImportarCAE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ImportarPadron.cs">
+      <DependentUpon>DS_ImportarPadron.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ImportarPadron.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ImportarPadron.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ImprimirPrestacion.cs">
+      <DependentUpon>DS_ImprimirPrestacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ImprimirPrestacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ImprimirPrestacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_InformeVentas.cs">
+      <DependentUpon>DS_InformeVentas.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_InformeVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_InformeVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Licencia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Licencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_LiquidacionEntidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_LiquidacionEntidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ListaCambiosDeCobrador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ListaCambiosDeCobrador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ListaCorreo.cs">
+      <DependentUpon>DS_ListaCorreo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ListaCorreo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ListaCorreo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Localidades.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Localidades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_LocalidadesLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_LocalidadesLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Lugares.cs">
+      <DependentUpon>DS_Lugares.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Lugares.Designer.cs">
+      <DependentUpon>DS_Lugares.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_LugaresLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_LugaresLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Medicamentos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Medicamentos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MedicosDeCabecera.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MedicosDeCabecera.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MoldesDeTurnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MoldesDeTurnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MotivosDeBaja.Designer.cs">
+      <DependentUpon>DS_MotivosDeBaja.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_MotivosDeCancelacionPrestacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MotivosDeCancelacionPrestacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MotivosDeLlamado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MotivosDeLlamado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_MotivosDevolucionCobranza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_MotivosDevolucionCobranza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Moviles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Moviles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Negocios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Negocios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Ocupaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Ocupaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_OrdenDePago.cs">
+      <DependentUpon>DS_OrdenDePago.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Pacientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Pacientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PacientesPrestacion.cs">
+      <DependentUpon>DS_PacientesPrestacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_PacientesPrestacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PacientesPrestacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Compra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Compra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_OrdenDePago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_OrdenDePago.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Parametros.cs">
+      <DependentUpon>DS_Parametros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Parametros.Designer.cs">
+      <DependentUpon>DS_Parametros.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_PersonalPrestacion.cs">
+      <DependentUpon>DS_PersonalPrestacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_PersonalPrestacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PersonalPrestacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Planes.cs">
+      <DependentUpon>DS_Planes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Planes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Planes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PlanesAfiliado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PlanesAfiliado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PlanesParaReporte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PlanesParaReporte.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PlanesPropios.Designer.cs">
+      <DependentUpon>DS_PlanesPropios.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_PorcentajeIVA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PorcentajeIVA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Practicas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Practicas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Prepagos.Designer.cs">
+      <DependentUpon>DS_Prepagos.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Prestacion.cs">
+      <DependentUpon>DS_Prestacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Prestacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Prestacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PrestacionesConSaldo.cs">
+      <DependentUpon>DS_PrestacionesConSaldo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_PrestacionesConSaldo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PrestacionesConSaldo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PrestacionesResumen.cs">
+      <DependentUpon>DS_PrestacionesResumen.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_PrestacionesResumen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PrestacionesResumen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PrestacionesSinCobrador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PrestacionesSinCobrador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Prestadores.Designer.cs">
+      <DependentUpon>DS_Prestadores.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Protecciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Protecciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Proveedores.cs">
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Proveedores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Provi_DireccionesSinZona.cs">
+      <DependentUpon>DS_Provi_DireccionesSinZona.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Provi_DireccionesSinZona.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Provi_DireccionesSinZona.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Provi_SinPlan.cs">
+      <DependentUpon>DS_Provi_SinPlan.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Provi_SinPlan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Provi_SinPlan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Prueba.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Prueba.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Puestos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Puestos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PuestosDelUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PuestosDelUsuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_PuntosDeVenta.Designer.cs">
+      <DependentUpon>DS_PuntosDeVenta.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Recursos.cs">
+      <DependentUpon>DS_Recursos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Recursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Recursos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RecursosLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RecursosLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Reintegros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Reintegros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Remesas.cs">
+      <DependentUpon>DS_Remesas.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Remesas.Designer.cs">
+      <DependentUpon>DS_Remesas.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_RemesasVista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RemesasVista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RenglonesDeFactura.cs">
+      <DependentUpon>DS_RenglonesDeFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RenglonesDeFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RenglonesDeFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RenglonesFacturaLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RenglonesFacturaLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportArqueo.cs">
+      <DependentUpon>DS_ReportArqueo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ReportArqueo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReportArqueo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportComprobantes.cs">
+      <DependentUpon>DS_ReportComprobantes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ReportComprobantes.Designer.cs">
+      <DependentUpon>DS_ReportComprobantes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_ReporteKadicard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteKadicard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteMacro.cs">
+      <DependentUpon>DS_ReporteMacro.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ReporteMacro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteMacro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteNaranja.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteNaranja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteReintegro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteReintegro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteRetiro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteRetiro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteRubrosNegocios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteRubrosNegocios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteTransferencia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteTransferencia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReporteVISA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReporteVISA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportExtensionDeCobertura.cs">
+      <DependentUpon>DS_ReportExtensionDeCobertura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportExtensionDeCobertura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReportExtensionDeCobertura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportLiquidacionEntidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReportLiquidacionEntidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportPago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReportPago.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_ReportRemesa.cs">
+      <DependentUpon>DS_ReportRemesa.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_ReportRemesa.Designer.cs">
+      <DependentUpon>DS_ReportRemesa.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_ReportRenglonesFacturaARevisar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_ReportRenglonesFacturaARevisar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_RepResumenPrestacionesPorCliente.cs">
+      <DependentUpon>DS_RepResumenPrestacionesPorCliente.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_RepResumenPrestacionesPorCliente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_RepResumenPrestacionesPorCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_AfiliadosPorEntidadDeCobranza.cs">
+      <DependentUpon>DS_Rep_AfiliadosPorEntidadDeCobranza.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_AfiliadosPorEntidadDeCobranza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_AfiliadosPorEntidadDeCobranza.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_AumentosAuto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_AumentosAuto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_BajasAutomaticas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_BajasAutomaticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_CambioDeCobrador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_CambioDeCobrador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_CantidadAfiliadosPlan.cs">
+      <DependentUpon>DS_Rep_CantidadAfiliadosPlan.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_CantidadAfiliadosPlan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_CantidadAfiliadosPlan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_ConstanciasAfiliacion.cs">
+      <DependentUpon>DS_Rep_ConstanciasAfiliacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_ConstanciasAfiliacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_ConstanciasAfiliacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_FacturasDeClientes.cs">
+      <DependentUpon>DS_Rep_FacturasDeClientes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_FacturasDeClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_FacturasDeClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_IVAVentasAfiliados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_IVAVentasAfiliados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_ListadoFacturadoPorEntidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_ListadoFacturadoPorEntidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_ListadoPorPlan.cs">
+      <DependentUpon>DS_Rep_ListadoPorPlan.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_ListadoPorPlan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_ListadoPorPlan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_NdeC.cs">
+      <DependentUpon>DS_Rep_NdeC.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_NdeC.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_NdeC.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_NoUnTitular.cs">
+      <DependentUpon>DS_Rep_NoUnTitular.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_NoUnTitular.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_NoUnTitular.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_Padron.cs">
+      <DependentUpon>DS_Rep_Padron.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_Padron.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_Padron.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_PrestCodigoLocalidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_PrestCodigoLocalidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_PrestLocalidadMotivoCodigo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_PrestLocalidadMotivoCodigo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_PrestMedicamentosUtilizados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_PrestMedicamentosUtilizados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_PuestosAutorizados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_PuestosAutorizados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_RenglonesAFacturar.cs">
+      <DependentUpon>DS_Rep_RenglonesAFacturar.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_RenglonesAFacturar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_RenglonesAFacturar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rep_TasaDeUso.cs">
+      <DependentUpon>DS_Rep_TasaDeUso.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Rep_TasaDeUso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rep_TasaDeUso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Retiros.cs">
+      <DependentUpon>DS_Retiros.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Retiros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Retiros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Rubros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Rubros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Sistemas.cs">
+      <DependentUpon>DS_Sistemas.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Sistemas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Sistemas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_SolicitudesCAE.cs">
+      <DependentUpon>DS_SolicitudesCAE.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_SolicitudesCAE.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_SolicitudesCAE.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TandasDeFacturacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TandasDeFacturacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TasaDeUsoAfYCli.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TasaDeUsoAfYCli.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TasaDeUsoClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TasaDeUsoClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Territorios.cs">
+      <DependentUpon>DS_Territorios.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Territorios.Designer.cs">
+      <DependentUpon>DS_Territorios.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_TipoDeCobranzaDelGrupo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TipoDeCobranzaDelGrupo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TiposDeAutorizacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TiposDeAutorizacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TiposDeCliente.Designer.cs">
+      <DependentUpon>DS_TiposDeCliente.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_TiposDeCobranza.Designer.cs">
+      <DependentUpon>DS_TiposDeCobranza.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_TiposDeComprobante.Designer.cs">
+      <DependentUpon>DS_TiposDeComprobante.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_TiposDeContrato.Designer.cs">
+      <DependentUpon>DS_TiposDeContrato.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_TiposDeDestino.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TiposDeDestino.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TiposDeDocumento.Designer.cs">
+      <DependentUpon>DS_TiposDeDocumento.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_TiposDeMovil.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TiposDeMovil.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TiposDeValores.Designer.cs">
+      <DependentUpon>DS_TiposDeValores.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DS_Transferencias.cs">
+      <DependentUpon>DS_Transferencias.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Transferencias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Transferencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Turnos.cs">
+      <DependentUpon>DS_Turnos.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_Turnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Turnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_TurnosImprimir.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TurnosImprimir.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Usuarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_UsuariosLista.cs">
+      <DependentUpon>DS_UsuariosLista.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS_UsuariosLista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_UsuariosLista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS_Zonas.Designer.cs">
+      <DependentUpon>DS_Zonas.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DS_BuscarProveedores.xsc">
+      <DependentUpon>DS_BuscarProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarProveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarProveedores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarProveedores.xss">
+      <DependentUpon>DS_BuscarProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Afiliados.xsc">
+      <DependentUpon>DS_Afiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Afiliados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Afiliados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Afiliados.xss">
+      <DependentUpon>DS_Afiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AntecedentesConsultorio.xsc">
+      <DependentUpon>DS_AntecedentesConsultorio.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AntecedentesConsultorio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AntecedentesConsultorio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_AntecedentesConsultorio.xss">
+      <DependentUpon>DS_AntecedentesConsultorio.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Arqueos.xsc">
+      <DependentUpon>DS_Arqueos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Arqueos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Arqueos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Arqueos.xss">
+      <DependentUpon>DS_Arqueos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AtencionesAnteriores.xsc">
+      <DependentUpon>DS_AtencionesAnteriores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AtencionesAnteriores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AtencionesAnteriores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_AtencionesAnteriores.xss">
+      <DependentUpon>DS_AtencionesAnteriores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Autorizaciones.xsc">
+      <DependentUpon>DS_Autorizaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Autorizaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Autorizaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Autorizaciones.xss">
+      <DependentUpon>DS_Autorizaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AutorizacionesDelPuesto.xsc">
+      <DependentUpon>DS_AutorizacionesDelPuesto.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AutorizacionesDelPuesto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AutorizacionesDelPuesto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_AutorizacionesDelPuesto.xss">
+      <DependentUpon>DS_AutorizacionesDelPuesto.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AutorizacionesDelUsuario.xsc">
+      <DependentUpon>DS_AutorizacionesDelUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_AutorizacionesDelUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_AutorizacionesDelUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_AutorizacionesDelUsuario.xss">
+      <DependentUpon>DS_AutorizacionesDelUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BajasOCambios.xsc">
+      <DependentUpon>DS_BajasOCambios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BajasOCambios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BajasOCambios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BajasOCambios.xss">
+      <DependentUpon>DS_BajasOCambios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Bancos.xsc">
+      <DependentUpon>DS_Bancos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Bancos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Bancos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Bancos.xss">
+      <DependentUpon>DS_Bancos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Barrios.xsc">
+      <DependentUpon>DS_Barrios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Barrios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Barrios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Barrios.xss">
+      <DependentUpon>DS_Barrios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarAfiliados.xsc">
+      <DependentUpon>DS_BuscarAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarAfiliados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarAfiliados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarAfiliados.xss">
+      <DependentUpon>DS_BuscarAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarAfiliadosActivos.xsc">
+      <DependentUpon>DS_BuscarAfiliadosActivos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarAfiliadosActivos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarAfiliadosActivos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarAfiliadosActivos.xss">
+      <DependentUpon>DS_BuscarAfiliadosActivos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarClientes.xsc">
+      <DependentUpon>DS_BuscarClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarClientes.xss">
+      <DependentUpon>DS_BuscarClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarContrato.xsc">
+      <DependentUpon>DS_BuscarContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarContrato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarContrato.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarContrato.xss">
+      <DependentUpon>DS_BuscarContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarPacientes.xsc">
+      <DependentUpon>DS_BuscarPacientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarPacientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarPacientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarPacientes.xss">
+      <DependentUpon>DS_BuscarPacientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarTelefono.xsc">
+      <DependentUpon>DS_BuscarTelefono.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarTelefono.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarTelefono.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarTelefono.xss">
+      <DependentUpon>DS_BuscarTelefono.xsd</DependentUpon>
+    </None>
+    <None Include="DS_cab_BuscarTelefono.xsc">
+      <DependentUpon>DS_cab_BuscarTelefono.xsd</DependentUpon>
+    </None>
+    <None Include="DS_cab_BuscarTelefono.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_cab_BuscarTelefono.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_cab_BuscarTelefono.xss">
+      <DependentUpon>DS_cab_BuscarTelefono.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Caja.xsc">
+      <DependentUpon>DS_Caja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Caja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Caja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Caja.xss">
+      <DependentUpon>DS_Caja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Cajas.xsc">
+      <DependentUpon>DS_Cajas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Cajas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Cajas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Cajas.xss">
+      <DependentUpon>DS_Cajas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CallesLista.xsc">
+      <DependentUpon>DS_CallesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CallesLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CallesLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_CallesLista.xss">
+      <DependentUpon>DS_CallesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CambiosDeCobrador.xsc">
+      <DependentUpon>DS_CambiosDeCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CambiosDeCobrador.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CambiosDeCobrador.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_CambiosDeCobrador.xss">
+      <DependentUpon>DS_CambiosDeCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Cargos.xsc">
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Cargos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Cargos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Cargos.xss">
+      <DependentUpon>DS_Cargos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CategoriasIVA.xsc">
+      <DependentUpon>DS_CategoriasIVA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CategoriasIVA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CategoriasIVA.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_CategoriasIVA.xss">
+      <DependentUpon>DS_CategoriasIVA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Clientes.xsc">
+      <DependentUpon>DS_Clientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Clientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Clientes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Clientes.xss">
+      <DependentUpon>DS_Clientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ClientesConContratoActivoYPlan.xsc">
+      <DependentUpon>DS_ClientesConContratoActivoYPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ClientesConContratoActivoYPlan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ClientesConContratoActivoYPlan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ClientesConContratoActivoYPlan.xss">
+      <DependentUpon>DS_ClientesConContratoActivoYPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ClientesLista.xsc">
+      <DependentUpon>DS_ClientesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ClientesLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ClientesLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ClientesLista.xss">
+      <DependentUpon>DS_ClientesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Coberturas.xsc">
+      <DependentUpon>DS_Coberturas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Coberturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Coberturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Coberturas.xss">
+      <DependentUpon>DS_Coberturas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Codigos.xsc">
+      <DependentUpon>DS_Codigos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Codigos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Codigos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Codigos.xss">
+      <DependentUpon>DS_Codigos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprobantePrestacion.xsc">
+      <DependentUpon>DS_ComprobantePrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprobantePrestacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ComprobantePrestacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ComprobantePrestacion.xss">
+      <DependentUpon>DS_ComprobantePrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Comprobantes.xsc">
+      <DependentUpon>DS_Comprobantes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Comprobantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Comprobantes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Comprobantes.xss">
+      <DependentUpon>DS_Comprobantes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprobantesDeFacturas.xsc">
+      <DependentUpon>DS_ComprobantesDeFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprobantesDeFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ComprobantesDeFacturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ComprobantesDeFacturas.xss">
+      <DependentUpon>DS_ComprobantesDeFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprasImpagas.xsc">
+      <DependentUpon>DS_ComprasImpagas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprasImpagas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ComprasImpagas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ComprasImpagas.xss">
+      <DependentUpon>DS_ComprasImpagas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprobantesImpagosCliente.xsc">
+      <DependentUpon>DS_ComprobantesImpagosCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ComprobantesImpagosCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ComprobantesImpagosCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ComprobantesImpagosCliente.xss">
+      <DependentUpon>DS_ComprobantesImpagosCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ContratosLista.xsc">
+      <DependentUpon>DS_ContratosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ContratosLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ContratosLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ContratosLista.xss">
+      <DependentUpon>DS_ContratosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Copagos.xsc">
+      <DependentUpon>DS_Copagos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Copagos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Copagos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Copagos.xss">
+      <DependentUpon>DS_Copagos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CuentaCorriente.xsc">
+      <DependentUpon>DS_CuentaCorriente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CuentaCorriente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CuentaCorriente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_CuentaCorriente.xss">
+      <DependentUpon>DS_CuentaCorriente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CuentaCorrienteProveedor.xsc">
+      <DependentUpon>DS_CuentaCorrienteProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CuentaCorrienteProveedor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CuentaCorrienteProveedor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_CuentaCorrienteProveedor.xss">
+      <DependentUpon>DS_CuentaCorrienteProveedor.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CUITRepetibles.xsc">
+      <DependentUpon>DS_CUITRepetibles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_CUITRepetibles.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_CUITRepetibles.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_CUITRepetibles.xss">
+      <DependentUpon>DS_CUITRepetibles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Destinos.xsc">
+      <DependentUpon>DS_Destinos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Destinos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Destinos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Destinos.xss">
+      <DependentUpon>DS_Destinos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DetalleFacturasCliente.xsc">
+      <DependentUpon>DS_DetalleFacturasCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DetalleFacturasCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DetalleFacturasCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DetalleFacturasCliente.xss">
+      <DependentUpon>DS_DetalleFacturasCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Diagnosticos.xsc">
+      <DependentUpon>DS_Diagnosticos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Diagnosticos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Diagnosticos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Diagnosticos.xss">
+      <DependentUpon>DS_Diagnosticos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DireccionLugar.xsc">
+      <DependentUpon>DS_DireccionLugar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DireccionLugar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DireccionLugar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DireccionLugar.xss">
+      <DependentUpon>DS_DireccionLugar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Empleados.xsc">
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Empleados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Empleados.Designer.cs</LastGenOutput>
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="DS_Empleados.xss">
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Empleados.xsx">
+      <DependentUpon>DS_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadosLista.xsc">
+      <DependentUpon>DS_EmpleadosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpleadosLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EmpleadosLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EmpleadosLista.xss">
+      <DependentUpon>DS_EmpleadosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpresasSueldoBancoMacro.xsc">
+      <DependentUpon>DS_EmpresasSueldoBancoMacro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EmpresasSueldoBancoMacro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EmpresasSueldoBancoMacro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EmpresasSueldoBancoMacro.xss">
+      <DependentUpon>DS_EmpresasSueldoBancoMacro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EnCaja.xsc">
+      <DependentUpon>DS_EnCaja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EnCaja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EnCaja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EnCaja.xss">
+      <DependentUpon>DS_EnCaja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EntidadesDeCobranza.xsc">
+      <DependentUpon>DS_EntidadesDeCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EntidadesDeCobranza.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EntidadesDeCobranza.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_EntidadesDeCobranza.xss">
+      <DependentUpon>DS_EntidadesDeCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadoActualDelGrupo.xsc">
+      <DependentUpon>DS_EstadoActualDelGrupo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadoActualDelGrupo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EstadoActualDelGrupo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EstadoActualDelGrupo.xss">
+      <DependentUpon>DS_EstadoActualDelGrupo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadoDeLaCobranza.xsc">
+      <DependentUpon>DS_EstadoDeLaCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadoDeLaCobranza.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EstadoDeLaCobranza.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EstadoDeLaCobranza.xss">
+      <DependentUpon>DS_EstadoDeLaCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ExportarImpresionFacturas.xsc">
+      <DependentUpon>DS_ExportarImpresionFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ExportarImpresionFacturas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ExportarImpresionFacturas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ExportarImpresionFacturas.xss">
+      <DependentUpon>DS_ExportarImpresionFacturas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Facturaciones.xsc">
+      <DependentUpon>DS_Facturaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Facturaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Facturaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Facturaciones.xss">
+      <DependentUpon>DS_Facturaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturadoClientes.xsc">
+      <DependentUpon>DS_FacturadoClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturadoClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_FacturadoClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_FacturadoClientes.xss">
+      <DependentUpon>DS_FacturadoClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturadoYCobrado.xsc">
+      <DependentUpon>DS_FacturadoYCobrado.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturadoYCobrado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_FacturadoYCobrado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_FacturadoYCobrado.xss">
+      <DependentUpon>DS_FacturadoYCobrado.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturaManual.xsc">
+      <DependentUpon>DS_FacturaManual.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturaManual.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_FacturaManual.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_FacturaManual.xss">
+      <DependentUpon>DS_FacturaManual.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturasSinCAE.xsc">
+      <DependentUpon>DS_FacturasSinCAE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturasSinCAE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_FacturasSinCAE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_FacturasSinCAE.xss">
+      <DependentUpon>DS_FacturasSinCAE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Feriados.xsc">
+      <DependentUpon>DS_Feriados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Feriados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Feriados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Feriados.xss">
+      <DependentUpon>DS_Feriados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hist_Planes.xsc">
+      <DependentUpon>DS_Hist_Planes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hist_Planes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Hist_Planes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Hist_Planes.xss">
+      <DependentUpon>DS_Hist_Planes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hist_Recursos.xsc">
+      <DependentUpon>DS_Hist_Recursos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hist_Recursos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Hist_Recursos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Hist_Recursos.xss">
+      <DependentUpon>DS_Hist_Recursos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hist_RenglonesFacturaProforma.xsc">
+      <DependentUpon>DS_Hist_RenglonesFacturaProforma.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Hist_RenglonesFacturaProforma.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Hist_RenglonesFacturaProforma.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Hist_RenglonesFacturaProforma.xss">
+      <DependentUpon>DS_Hist_RenglonesFacturaProforma.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Ids.xsc">
+      <DependentUpon>DS_Ids.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Ids.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Ids.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Ids.xss">
+      <DependentUpon>DS_Ids.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImportarCAE.xsc">
+      <DependentUpon>DS_ImportarCAE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImportarCAE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ImportarCAE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ImportarCAE.xss">
+      <DependentUpon>DS_ImportarCAE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImportarPadron.xsc">
+      <DependentUpon>DS_ImportarPadron.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImportarPadron.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ImportarPadron.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ImportarPadron.xss">
+      <DependentUpon>DS_ImportarPadron.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImprimirPrestacion.xsc">
+      <DependentUpon>DS_ImprimirPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ImprimirPrestacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ImprimirPrestacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ImprimirPrestacion.xss">
+      <DependentUpon>DS_ImprimirPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_InformeVentas.xsc">
+      <DependentUpon>DS_InformeVentas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_InformeVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_InformeVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_InformeVentas.xss">
+      <DependentUpon>DS_InformeVentas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ListaCorreo.xsc">
+      <DependentUpon>DS_ListaCorreo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ListaCorreo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ListaCorreo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ListaCorreo.xss">
+      <DependentUpon>DS_ListaCorreo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Localidades.xsc">
+      <DependentUpon>DS_Localidades.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Localidades.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Localidades.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Localidades.xss">
+      <DependentUpon>DS_Localidades.xsd</DependentUpon>
+    </None>
+    <None Include="DS_LocalidadesLista.xsc">
+      <DependentUpon>DS_LocalidadesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_LocalidadesLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_LocalidadesLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_LocalidadesLista.xss">
+      <DependentUpon>DS_LocalidadesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Lugares.xsc">
+      <DependentUpon>DS_Lugares.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Lugares.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Lugares.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Lugares.xss">
+      <DependentUpon>DS_Lugares.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Medicamentos.xsc">
+      <DependentUpon>DS_Medicamentos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Medicamentos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Medicamentos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Medicamentos.xss">
+      <DependentUpon>DS_Medicamentos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MedicosDeCabecera.xsc">
+      <DependentUpon>DS_MedicosDeCabecera.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MedicosDeCabecera.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MedicosDeCabecera.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_MedicosDeCabecera.xss">
+      <DependentUpon>DS_MedicosDeCabecera.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MoldesDeTurnos.xsc">
+      <DependentUpon>DS_MoldesDeTurnos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MoldesDeTurnos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MoldesDeTurnos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_MoldesDeTurnos.xss">
+      <DependentUpon>DS_MoldesDeTurnos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDeBaja.xsc">
+      <DependentUpon>DS_MotivosDeBaja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDeBaja.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MotivosDeBaja.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_MotivosDeBaja.xss">
+      <DependentUpon>DS_MotivosDeBaja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDeCancelacionPrestacion.xsc">
+      <DependentUpon>DS_MotivosDeCancelacionPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDeCancelacionPrestacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MotivosDeCancelacionPrestacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_MotivosDeCancelacionPrestacion.xss">
+      <DependentUpon>DS_MotivosDeCancelacionPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDeLlamado.xsc">
+      <DependentUpon>DS_MotivosDeLlamado.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDeLlamado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MotivosDeLlamado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_MotivosDeLlamado.xss">
+      <DependentUpon>DS_MotivosDeLlamado.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDevolucionCobranza.xsc">
+      <DependentUpon>DS_MotivosDevolucionCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_MotivosDevolucionCobranza.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_MotivosDevolucionCobranza.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_MotivosDevolucionCobranza.xss">
+      <DependentUpon>DS_MotivosDevolucionCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Moviles.xsc">
+      <DependentUpon>DS_Moviles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Moviles.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Moviles.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Moviles.xss">
+      <DependentUpon>DS_Moviles.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Negocios.xsc">
+      <DependentUpon>DS_Negocios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Negocios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Negocios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Negocios.xss">
+      <DependentUpon>DS_Negocios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Ocupaciones.xsc">
+      <DependentUpon>DS_Ocupaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Ocupaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Ocupaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Ocupaciones.xss">
+      <DependentUpon>DS_Ocupaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Pacientes.xsc">
+      <DependentUpon>DS_Pacientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Pacientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Pacientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Pacientes.xss">
+      <DependentUpon>DS_Pacientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PacientesPrestacion.xsc">
+      <DependentUpon>DS_PacientesPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PacientesPrestacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PacientesPrestacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PacientesPrestacion.xss">
+      <DependentUpon>DS_PacientesPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Compra.xsc">
+      <DependentUpon>DS_Compra.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Compra.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Compra.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Compra.xss">
+      <DependentUpon>DS_Compra.xsd</DependentUpon>
+    </None>
+    <None Include="DS_OrdenDePago.xsc">
+      <DependentUpon>DS_OrdenDePago.xsd</DependentUpon>
+    </None>
+    <None Include="DS_OrdenDePago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_OrdenDePago.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_OrdenDePago.xss">
+      <DependentUpon>DS_OrdenDePago.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Parametros.xsc">
+      <DependentUpon>DS_Parametros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Parametros.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Parametros.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Parametros.xss">
+      <DependentUpon>DS_Parametros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PersonalPrestacion.xsc">
+      <DependentUpon>DS_PersonalPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PersonalPrestacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PersonalPrestacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PersonalPrestacion.xss">
+      <DependentUpon>DS_PersonalPrestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Planes.xsc">
+      <DependentUpon>DS_Planes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Planes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Planes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Planes.xss">
+      <DependentUpon>DS_Planes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PlanesAfiliado.xsc">
+      <DependentUpon>DS_PlanesAfiliado.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PlanesAfiliado.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PlanesAfiliado.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PlanesAfiliado.xss">
+      <DependentUpon>DS_PlanesAfiliado.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PlanesPropios.xsc">
+      <DependentUpon>DS_PlanesPropios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PlanesPropios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PlanesPropios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_PlanesPropios.xss">
+      <DependentUpon>DS_PlanesPropios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PorcentajeIVA.xsc">
+      <DependentUpon>DS_PorcentajeIVA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PorcentajeIVA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PorcentajeIVA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PorcentajeIVA.xss">
+      <DependentUpon>DS_PorcentajeIVA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Practicas.xsc">
+      <DependentUpon>DS_Practicas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Practicas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Practicas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Practicas.xss">
+      <DependentUpon>DS_Practicas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prepagos.xsc">
+      <DependentUpon>DS_Prepagos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prepagos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Prepagos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Prepagos.xss">
+      <DependentUpon>DS_Prepagos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prestacion.xsc">
+      <DependentUpon>DS_Prestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prestacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Prestacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Prestacion.xss">
+      <DependentUpon>DS_Prestacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PrestacionesConSaldo.xsc">
+      <DependentUpon>DS_PrestacionesConSaldo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PrestacionesConSaldo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PrestacionesConSaldo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PrestacionesConSaldo.xss">
+      <DependentUpon>DS_PrestacionesConSaldo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PrestacionesResumen.xsc">
+      <DependentUpon>DS_PrestacionesResumen.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PrestacionesResumen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PrestacionesResumen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PrestacionesResumen.xss">
+      <DependentUpon>DS_PrestacionesResumen.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PrestacionesSinCobrador.xsc">
+      <DependentUpon>DS_PrestacionesSinCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PrestacionesSinCobrador.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PrestacionesSinCobrador.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PrestacionesSinCobrador.xss">
+      <DependentUpon>DS_PrestacionesSinCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prestadores.xsc">
+      <DependentUpon>DS_Prestadores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prestadores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Prestadores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Prestadores.xss">
+      <DependentUpon>DS_Prestadores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Proveedores.xsc">
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Proveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Proveedores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Proveedores.xss">
+      <DependentUpon>DS_Proveedores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Provi_DireccionesSinZona.xsc">
+      <DependentUpon>DS_Provi_DireccionesSinZona.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Provi_DireccionesSinZona.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Provi_DireccionesSinZona.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Provi_DireccionesSinZona.xss">
+      <DependentUpon>DS_Provi_DireccionesSinZona.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Provi_SinPlan.xsc">
+      <DependentUpon>DS_Provi_SinPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Provi_SinPlan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Provi_SinPlan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Provi_SinPlan.xss">
+      <DependentUpon>DS_Provi_SinPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prueba.xsc">
+      <DependentUpon>DS_Prueba.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Prueba.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Prueba.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Prueba.xss">
+      <DependentUpon>DS_Prueba.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Puestos.xsc">
+      <DependentUpon>DS_Puestos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Puestos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Puestos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Puestos.xss">
+      <DependentUpon>DS_Puestos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PuestosDelUsuario.xsc">
+      <DependentUpon>DS_PuestosDelUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PuestosDelUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PuestosDelUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PuestosDelUsuario.xss">
+      <DependentUpon>DS_PuestosDelUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PuntosDeVenta.xsc">
+      <DependentUpon>DS_PuntosDeVenta.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PuntosDeVenta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PuntosDeVenta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_PuntosDeVenta.xss">
+      <DependentUpon>DS_PuntosDeVenta.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Recursos.xsc">
+      <DependentUpon>DS_Recursos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Recursos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Recursos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Recursos.xss">
+      <DependentUpon>DS_Recursos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RecursosLista.xsc">
+      <DependentUpon>DS_RecursosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RecursosLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RecursosLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RecursosLista.xss">
+      <DependentUpon>DS_RecursosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Reintegros.xsc">
+      <DependentUpon>DS_Reintegros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Reintegros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Reintegros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Reintegros.xss">
+      <DependentUpon>DS_Reintegros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Remesas.xsc">
+      <DependentUpon>DS_Remesas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Remesas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Remesas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Remesas.xss">
+      <DependentUpon>DS_Remesas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RenglonesDeFactura.xsc">
+      <DependentUpon>DS_RenglonesDeFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RenglonesDeFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RenglonesDeFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RenglonesDeFactura.xss">
+      <DependentUpon>DS_RenglonesDeFactura.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RenglonesFacturaLista.xsc">
+      <DependentUpon>DS_RenglonesFacturaLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RenglonesFacturaLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RenglonesFacturaLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RenglonesFacturaLista.xss">
+      <DependentUpon>DS_RenglonesFacturaLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportArqueo.xsc">
+      <DependentUpon>DS_ReportArqueo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportArqueo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportArqueo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReportArqueo.xss">
+      <DependentUpon>DS_ReportArqueo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportComprobantes.xsc">
+      <DependentUpon>DS_ReportComprobantes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportComprobantes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportComprobantes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_ReportComprobantes.xss">
+      <DependentUpon>DS_ReportComprobantes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteKadicard.xsc">
+      <DependentUpon>DS_ReporteKadicard.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteKadicard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteKadicard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteKadicard.xss">
+      <DependentUpon>DS_ReporteKadicard.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteMacro.xsc">
+      <DependentUpon>DS_ReporteMacro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteMacro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteMacro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteMacro.xss">
+      <DependentUpon>DS_ReporteMacro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteNaranja.xsc">
+      <DependentUpon>DS_ReporteNaranja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteNaranja.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteNaranja.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteNaranja.xss">
+      <DependentUpon>DS_ReporteNaranja.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteReintegro.xsc">
+      <DependentUpon>DS_ReporteReintegro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteReintegro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteReintegro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteReintegro.xss">
+      <DependentUpon>DS_ReporteReintegro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteRetiro.xsc">
+      <DependentUpon>DS_ReporteRetiro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteRetiro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteRetiro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteRetiro.xss">
+      <DependentUpon>DS_ReporteRetiro.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteRubrosNegocios.xsc">
+      <DependentUpon>DS_ReporteRubrosNegocios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteRubrosNegocios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteRubrosNegocios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteRubrosNegocios.xss">
+      <DependentUpon>DS_ReporteRubrosNegocios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteTransferencia.xsc">
+      <DependentUpon>DS_ReporteTransferencia.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteTransferencia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteTransferencia.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteTransferencia.xss">
+      <DependentUpon>DS_ReporteTransferencia.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteVISA.xsc">
+      <DependentUpon>DS_ReporteVISA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReporteVISA.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReporteVISA.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReporteVISA.xss">
+      <DependentUpon>DS_ReporteVISA.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportExtensionDeCobertura.xsc">
+      <DependentUpon>DS_ReportExtensionDeCobertura.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportExtensionDeCobertura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportExtensionDeCobertura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReportExtensionDeCobertura.xss">
+      <DependentUpon>DS_ReportExtensionDeCobertura.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportPago.xsc">
+      <DependentUpon>DS_ReportPago.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportPago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportPago.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReportPago.xss">
+      <DependentUpon>DS_ReportPago.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportRemesa.xsc">
+      <DependentUpon>DS_ReportRemesa.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportRemesa.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportRemesa.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_ReportRemesa.xss">
+      <DependentUpon>DS_ReportRemesa.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportRenglonesFacturaARevisar.xsc">
+      <DependentUpon>DS_ReportRenglonesFacturaARevisar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportRenglonesFacturaARevisar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportRenglonesFacturaARevisar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReportRenglonesFacturaARevisar.xss">
+      <DependentUpon>DS_ReportRenglonesFacturaARevisar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RepResumenPrestacionesPorCliente.xsc">
+      <DependentUpon>DS_RepResumenPrestacionesPorCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RepResumenPrestacionesPorCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RepResumenPrestacionesPorCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RepResumenPrestacionesPorCliente.xss">
+      <DependentUpon>DS_RepResumenPrestacionesPorCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_AfiliadosPorEntidadDeCobranza.xsc">
+      <DependentUpon>DS_Rep_AfiliadosPorEntidadDeCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_AfiliadosPorEntidadDeCobranza.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_AfiliadosPorEntidadDeCobranza.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_AfiliadosPorEntidadDeCobranza.xss">
+      <DependentUpon>DS_Rep_AfiliadosPorEntidadDeCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_AumentosAuto.xsc">
+      <DependentUpon>DS_Rep_AumentosAuto.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_AumentosAuto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_AumentosAuto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_AumentosAuto.xss">
+      <DependentUpon>DS_Rep_AumentosAuto.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_CambioDeCobrador.xsc">
+      <DependentUpon>DS_Rep_CambioDeCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_CambioDeCobrador.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_CambioDeCobrador.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_CambioDeCobrador.xss">
+      <DependentUpon>DS_Rep_CambioDeCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_CantidadAfiliadosPlan.xsc">
+      <DependentUpon>DS_Rep_CantidadAfiliadosPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_CantidadAfiliadosPlan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_CantidadAfiliadosPlan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_CantidadAfiliadosPlan.xss">
+      <DependentUpon>DS_Rep_CantidadAfiliadosPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_ConstanciasAfiliacion.xsc">
+      <DependentUpon>DS_Rep_ConstanciasAfiliacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_ConstanciasAfiliacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_ConstanciasAfiliacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_ConstanciasAfiliacion.xss">
+      <DependentUpon>DS_Rep_ConstanciasAfiliacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_FacturasDeClientes.xsc">
+      <DependentUpon>DS_Rep_FacturasDeClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_FacturasDeClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_FacturasDeClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_FacturasDeClientes.xss">
+      <DependentUpon>DS_Rep_FacturasDeClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_IVAVentasAfiliados.xsc">
+      <DependentUpon>DS_Rep_IVAVentasAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_IVAVentasAfiliados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_IVAVentasAfiliados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_IVAVentasAfiliados.xss">
+      <DependentUpon>DS_Rep_IVAVentasAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_ListadoFacturadoPorEntidad.xsc">
+      <DependentUpon>DS_Rep_ListadoFacturadoPorEntidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_ListadoFacturadoPorEntidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_ListadoFacturadoPorEntidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_ListadoFacturadoPorEntidad.xss">
+      <DependentUpon>DS_Rep_ListadoFacturadoPorEntidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_ListadoPorPlan.xsc">
+      <DependentUpon>DS_Rep_ListadoPorPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_ListadoPorPlan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_ListadoPorPlan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_ListadoPorPlan.xss">
+      <DependentUpon>DS_Rep_ListadoPorPlan.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_NdeC.xsc">
+      <DependentUpon>DS_Rep_NdeC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_NdeC.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_NdeC.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_NdeC.xss">
+      <DependentUpon>DS_Rep_NdeC.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_NoUnTitular.xsc">
+      <DependentUpon>DS_Rep_NoUnTitular.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_NoUnTitular.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_NoUnTitular.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_NoUnTitular.xss">
+      <DependentUpon>DS_Rep_NoUnTitular.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_Padron.xsc">
+      <DependentUpon>DS_Rep_Padron.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_Padron.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_Padron.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_Padron.xss">
+      <DependentUpon>DS_Rep_Padron.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PrestCodigoLocalidad.xsc">
+      <DependentUpon>DS_Rep_PrestCodigoLocalidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PrestCodigoLocalidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_PrestCodigoLocalidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_PrestCodigoLocalidad.xss">
+      <DependentUpon>DS_Rep_PrestCodigoLocalidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PuestosAutorizados.xsc">
+      <DependentUpon>DS_Rep_PuestosAutorizados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PuestosAutorizados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_PuestosAutorizados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_PuestosAutorizados.xss">
+      <DependentUpon>DS_Rep_PuestosAutorizados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_RenglonesAFacturar.xsc">
+      <DependentUpon>DS_Rep_RenglonesAFacturar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_RenglonesAFacturar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_RenglonesAFacturar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_RenglonesAFacturar.xss">
+      <DependentUpon>DS_Rep_RenglonesAFacturar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Retiros.xsc">
+      <DependentUpon>DS_Retiros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Retiros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Retiros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Retiros.xss">
+      <DependentUpon>DS_Retiros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rubros.xsc">
+      <DependentUpon>DS_Rubros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rubros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rubros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rubros.xss">
+      <DependentUpon>DS_Rubros.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Sistemas.xsc">
+      <DependentUpon>DS_Sistemas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Sistemas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Sistemas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Sistemas.xss">
+      <DependentUpon>DS_Sistemas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_SolicitudesCAE.xsc">
+      <DependentUpon>DS_SolicitudesCAE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_SolicitudesCAE.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_SolicitudesCAE.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_SolicitudesCAE.xss">
+      <DependentUpon>DS_SolicitudesCAE.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TandasDeFacturacion.xsc">
+      <DependentUpon>DS_TandasDeFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TandasDeFacturacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TandasDeFacturacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TandasDeFacturacion.xss">
+      <DependentUpon>DS_TandasDeFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TasaDeUsoAfYCli.xsc">
+      <DependentUpon>DS_TasaDeUsoAfYCli.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TasaDeUsoAfYCli.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TasaDeUsoAfYCli.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TasaDeUsoAfYCli.xss">
+      <DependentUpon>DS_TasaDeUsoAfYCli.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TasaDeUsoClientes.xsc">
+      <DependentUpon>DS_TasaDeUsoClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TasaDeUsoClientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TasaDeUsoClientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TasaDeUsoClientes.xss">
+      <DependentUpon>DS_TasaDeUsoClientes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Territorios.xsc">
+      <DependentUpon>DS_Territorios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Territorios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Territorios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Territorios.xss">
+      <DependentUpon>DS_Territorios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TipoDeCobranzaDelGrupo.xsc">
+      <DependentUpon>DS_TipoDeCobranzaDelGrupo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TipoDeCobranzaDelGrupo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TipoDeCobranzaDelGrupo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TipoDeCobranzaDelGrupo.xss">
+      <DependentUpon>DS_TipoDeCobranzaDelGrupo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeAutorizacion.xsc">
+      <DependentUpon>DS_TiposDeAutorizacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeAutorizacion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeAutorizacion.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TiposDeAutorizacion.xss">
+      <DependentUpon>DS_TiposDeAutorizacion.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeCliente.xsc">
+      <DependentUpon>DS_TiposDeCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeCliente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeCliente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_TiposDeCliente.xss">
+      <DependentUpon>DS_TiposDeCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeCobranza.xsc">
+      <DependentUpon>DS_TiposDeCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeCobranza.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeCobranza.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_TiposDeCobranza.xss">
+      <DependentUpon>DS_TiposDeCobranza.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeComprobante.xsc">
+      <DependentUpon>DS_TiposDeComprobante.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeComprobante.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeComprobante.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_TiposDeComprobante.xss">
+      <DependentUpon>DS_TiposDeComprobante.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeContrato.xsc">
+      <DependentUpon>DS_TiposDeContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeContrato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeContrato.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_TiposDeContrato.xss">
+      <DependentUpon>DS_TiposDeContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeDestino.xsc">
+      <DependentUpon>DS_TiposDeDestino.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeDestino.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeDestino.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TiposDeDestino.xss">
+      <DependentUpon>DS_TiposDeDestino.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeDocumento.xsc">
+      <DependentUpon>DS_TiposDeDocumento.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeDocumento.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeDocumento.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_TiposDeDocumento.xss">
+      <DependentUpon>DS_TiposDeDocumento.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeMovil.xsc">
+      <DependentUpon>DS_TiposDeMovil.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeMovil.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeMovil.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TiposDeMovil.xss">
+      <DependentUpon>DS_TiposDeMovil.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeValores.xsc">
+      <DependentUpon>DS_TiposDeValores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TiposDeValores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TiposDeValores.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_TiposDeValores.xss">
+      <DependentUpon>DS_TiposDeValores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Transferencias.xsc">
+      <DependentUpon>DS_Transferencias.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Transferencias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Transferencias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Transferencias.xss">
+      <DependentUpon>DS_Transferencias.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Turnos.xsc">
+      <DependentUpon>DS_Turnos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Turnos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Turnos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Turnos.xss">
+      <DependentUpon>DS_Turnos.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TurnosImprimir.xsc">
+      <DependentUpon>DS_TurnosImprimir.xsd</DependentUpon>
+    </None>
+    <None Include="DS_TurnosImprimir.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TurnosImprimir.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_TurnosImprimir.xss">
+      <DependentUpon>DS_TurnosImprimir.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Usuarios.xsc">
+      <DependentUpon>DS_Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Usuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Usuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Usuarios.xss">
+      <DependentUpon>DS_Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="DS_UsuariosLista.xsc">
+      <DependentUpon>DS_UsuariosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_UsuariosLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_UsuariosLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_UsuariosLista.xss">
+      <DependentUpon>DS_UsuariosLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Zonas.xsc">
+      <DependentUpon>DS_Zonas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Zonas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Zonas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DS_Zonas.xss">
+      <DependentUpon>DS_Zonas.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cmp_ABC_Autorizaciones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Autorizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Bancos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Bancos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_CUITRepetibles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_CUITRepetibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_MedicosDeCabecera.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_MedicosDeCabecera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Ocupaciones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Ocupaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Proveedores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Puestos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Puestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_PuestosDelUsuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_PuestosDelUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Sistemas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Sistemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TandasDeFacturacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TandasDeFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeAutorizacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Arqueo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Arqueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_BajasOCambios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_BajasOCambios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_Consultorios.resx">
+      <DependentUpon>cmp_cab_Consultorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_Prestaciones.resx">
+      <DependentUpon>cmp_cab_Prestaciones.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Caja.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Deudores.resx">
+      <DependentUpon>cmp_Deudores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_EstadoDeLaCobranza.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_EstadoDeLaCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Facturaciones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Facturaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_FacturacionMensualAfiliados.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_FacturacionMensualAfiliados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Compra.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_RenglonesFP.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_RenglonesFP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReporteExtensionDeCobertura.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ReporteExtensionDeCobertura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Clientes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Empleados.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Grupos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Lugares.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Lugares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_MotivosDevolucionCobranza.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_MotivosDevolucionCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Parametros.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Parametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeContrato.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeContrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_AutorizacionesDelPuesto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_AutorizacionesDelPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_Coberturas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_Coberturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_Medicamentos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_Medicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_MotivosDeCancelacionPrestacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_MotivosDeCancelacionPrestacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_MotivosDeLlamado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_MotivosDeLlamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_Moviles.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_Moviles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_Practicas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_Practicas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_Recursos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_Recursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_TiposDeDestino.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_TiposDeDestino.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ImprimirPrestacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ImprimirPrestacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_TomarLlamado.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_TomarLlamado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_Diagnosticos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_Diagnosticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_cab_ABC_TiposDeMovil.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_cab_ABC_TiposDeMovil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_CambioDeGrupo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_CambioDeGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_CambiosDeCobrador.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_CambiosDeCobrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CmpClientes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CmpClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ConstanciasDeAfiliacion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ConstanciasDeAfiliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_EstadoActualDelGrupo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_EstadoActualDelGrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_FacturaManual.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_FacturaManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Grupos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Prepagos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Prepagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Codigos.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Codigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_EntidadesDeCobranza.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_EntidadesDeCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_MotivosDeBaja.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_MotivosDeBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_PlanesPropios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_PlanesPropios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Prestadores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Prestadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_PuntosDeVenta.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_PuntosDeVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Territorios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Territorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_CategoriasIva.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_CategoriasIva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeCliente.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeCobranza.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeComprobante.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeDocumento.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_TiposDeValores.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_TiposDeValores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ABC_Zonas.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ABC_Zonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Principal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Provi_DireccionesSinZona.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Provi_DireccionesSinZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_prueba.resx">
+      <DependentUpon>cmp_prueba.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Remesa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Remesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReporteArqueo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ReporteArqueo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReporteCupones.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ReporteCupones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReporteNdeC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ReporteNdeC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReporteRemesa.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ReporteRemesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReportesAfiliados.resx">
+      <DependentUpon>cmp_ReportesAfiliados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_ReporteVISA.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_ReporteVISA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_rep_AfiliadosPorEntidadDeCobranza.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_rep_AfiliadosPorEntidadDeCobranza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_rep_CantidadAfiliadosPlan.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_rep_CantidadAfiliadosPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_Rep_EstPrest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_Rep_EstPrest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_rep_FacturasDeClientes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_rep_FacturasDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_rep_Padron.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_rep_Padron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_rep_RenglonesAFacturar.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_rep_RenglonesAFacturar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmp_rep_CuentaCorriente.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>cmp_rep_CuentaCorriente.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DSMovilesLista.xsc">
+      <DependentUpon>DSMovilesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DSMovilesLista.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMovilesLista1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSMovilesLista.xss">
+      <DependentUpon>DSMovilesLista.xsd</DependentUpon>
+    </None>
+    <None Include="DSPacientesIncompletos.xsc">
+      <DependentUpon>DSPacientesIncompletos.xsd</DependentUpon>
+    </None>
+    <None Include="DSPacientesIncompletos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPacientesIncompletos1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPacientesIncompletos.xss">
+      <DependentUpon>DSPacientesIncompletos.xsd</DependentUpon>
+    </None>
+    <None Include="DSZonasLista.xsc">
+      <DependentUpon>DSZonasLista.xsd</DependentUpon>
+    </None>
+    <None Include="DSZonasLista.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSZonasLista1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSZonasLista.xss">
+      <DependentUpon>DSZonasLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarPlanContrato.xsc">
+      <DependentUpon>DS_BuscarPlanContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DS_BuscarPlanContrato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_BuscarPlanContrato.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_BuscarPlanContrato.xss">
+      <DependentUpon>DS_BuscarPlanContrato.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DatosPrestaciones.xsc">
+      <DependentUpon>DS_DatosPrestaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DatosPrestaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DatosPrestaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DatosPrestaciones.xss">
+      <DependentUpon>DS_DatosPrestaciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DescuentosGrupoNumeroso.xsc">
+      <DependentUpon>DS_DescuentosGrupoNumeroso.xsd</DependentUpon>
+    </None>
+    <None Include="DS_DescuentosGrupoNumeroso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_DescuentosGrupoNumeroso.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_DescuentosGrupoNumeroso.xss">
+      <DependentUpon>DS_DescuentosGrupoNumeroso.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Deudores.xsc">
+      <DependentUpon>DS_Deudores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Deudores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Deudores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Deudores.xss">
+      <DependentUpon>DS_Deudores.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EntidadesSinLiquidar.xsc">
+      <DependentUpon>DS_EntidadesSinLiquidar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EntidadesSinLiquidar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EntidadesSinLiquidar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EntidadesSinLiquidar.xss">
+      <DependentUpon>DS_EntidadesSinLiquidar.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadisticaCantidadDeAfiliados.xsc">
+      <DependentUpon>DS_EstadisticaCantidadDeAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadisticaCantidadDeAfiliados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EstadisticaCantidadDeAfiliados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EstadisticaCantidadDeAfiliados.xss">
+      <DependentUpon>DS_EstadisticaCantidadDeAfiliados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadisticaPlanes.xsc">
+      <DependentUpon>DS_EstadisticaPlanes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_EstadisticaPlanes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_EstadisticaPlanes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_EstadisticaPlanes.xss">
+      <DependentUpon>DS_EstadisticaPlanes.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturasProformaDelCliente.xsc">
+      <DependentUpon>DS_FacturasProformaDelCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FacturasProformaDelCliente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_FacturasProformaDelCliente.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_FacturasProformaDelCliente.xss">
+      <DependentUpon>DS_FacturasProformaDelCliente.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FechasBajasAutomaticas.xsc">
+      <DependentUpon>DS_FechasBajasAutomaticas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_FechasBajasAutomaticas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_FechasBajasAutomaticas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_FechasBajasAutomaticas.xss">
+      <DependentUpon>DS_FechasBajasAutomaticas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Licencia.xsc">
+      <DependentUpon>DS_Licencia.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Licencia.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Licencia.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Licencia.xss">
+      <DependentUpon>DS_Licencia.xsd</DependentUpon>
+    </None>
+    <None Include="DS_LiquidacionEntidad.xsc">
+      <DependentUpon>DS_LiquidacionEntidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_LiquidacionEntidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_LiquidacionEntidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_LiquidacionEntidad.xss">
+      <DependentUpon>DS_LiquidacionEntidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ListaCambiosDeCobrador.xsc">
+      <DependentUpon>DS_ListaCambiosDeCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ListaCambiosDeCobrador.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ListaCambiosDeCobrador.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ListaCambiosDeCobrador.xss">
+      <DependentUpon>DS_ListaCambiosDeCobrador.xsd</DependentUpon>
+    </None>
+    <None Include="DS_LugaresLista.xsc">
+      <DependentUpon>DS_LugaresLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_LugaresLista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_LugaresLista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_LugaresLista.xss">
+      <DependentUpon>DS_LugaresLista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PlanesParaReporte.xsc">
+      <DependentUpon>DS_PlanesParaReporte.xsd</DependentUpon>
+    </None>
+    <None Include="DS_PlanesParaReporte.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PlanesParaReporte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_PlanesParaReporte.xss">
+      <DependentUpon>DS_PlanesParaReporte.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Protecciones.xsc">
+      <DependentUpon>DS_Protecciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Protecciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Protecciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Protecciones.xss">
+      <DependentUpon>DS_Protecciones.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RemesasVista.xsc">
+      <DependentUpon>DS_RemesasVista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_RemesasVista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_RemesasVista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_RemesasVista.xss">
+      <DependentUpon>DS_RemesasVista.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportLiquidacionEntidad.xsc">
+      <DependentUpon>DS_ReportLiquidacionEntidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_ReportLiquidacionEntidad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_ReportLiquidacionEntidad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_ReportLiquidacionEntidad.xss">
+      <DependentUpon>DS_ReportLiquidacionEntidad.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_BajasAutomaticas.xsc">
+      <DependentUpon>DS_Rep_BajasAutomaticas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_BajasAutomaticas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_BajasAutomaticas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_BajasAutomaticas.xss">
+      <DependentUpon>DS_Rep_BajasAutomaticas.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PrestLocalidadMotivoCodigo.xsc">
+      <DependentUpon>DS_Rep_PrestLocalidadMotivoCodigo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PrestLocalidadMotivoCodigo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_PrestLocalidadMotivoCodigo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_PrestLocalidadMotivoCodigo.xss">
+      <DependentUpon>DS_Rep_PrestLocalidadMotivoCodigo.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PrestMedicamentosUtilizados.xsc">
+      <DependentUpon>DS_Rep_PrestMedicamentosUtilizados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_PrestMedicamentosUtilizados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_PrestMedicamentosUtilizados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_PrestMedicamentosUtilizados.xss">
+      <DependentUpon>DS_Rep_PrestMedicamentosUtilizados.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_TasaDeUso.xsc">
+      <DependentUpon>DS_Rep_TasaDeUso.xsd</DependentUpon>
+    </None>
+    <None Include="DS_Rep_TasaDeUso.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Rep_TasaDeUso.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_Rep_TasaDeUso.xss">
+      <DependentUpon>DS_Rep_TasaDeUso.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

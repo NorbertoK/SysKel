@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsRepPuestosAutorizados" targetNamespace="http://tempuri.org/DsRep_PuestosAutorizados.xsd" xmlns:mstns="http://tempuri.org/DsRep_PuestosAutorizados.xsd" xmlns="http://tempuri.org/DsRep_PuestosAutorizados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Administración.Properties.Settings.GlobalReference.Default.DatosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PuestosAutorizadosTableAdapter" GeneratorDataComponentClassName="PuestosAutorizadosTableAdapter" Name="PuestosAutorizados" UserDataComponentName="PuestosAutorizadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DatosConnectionString (Settings)" DbObjectName="Datos.dbo.Autorizaciones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a.Descripcion as Autorizacion
+		, isnull(p.nombre,'Ningún puesto autorizado') as Puesto
+FROM dbo.Autorizaciones a
+LEFT JOIN dbo.AutorizacionesDelPuesto ap on ap.idAutorizacion = a.idAutorizacion
+LEFT JOIN dbo.Puestos p on p.idPuesto = ap.idPuesto
+order by 1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Autorizacion" DataSetColumn="Autorizacion" />
+              <Mapping SourceColumn="Puesto" DataSetColumn="Puesto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsRepPuestosAutorizados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsRepPuestosAutorizados" msprop:Generator_DataSetName="DsRepPuestosAutorizados" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PuestosAutorizados" msprop:Generator_UserTableName="PuestosAutorizados" msprop:Generator_RowDeletedName="PuestosAutorizadosRowDeleted" msprop:Generator_RowChangedName="PuestosAutorizadosRowChanged" msprop:Generator_RowClassName="PuestosAutorizadosRow" msprop:Generator_RowChangingName="PuestosAutorizadosRowChanging" msprop:Generator_RowEvArgName="PuestosAutorizadosRowChangeEvent" msprop:Generator_RowEvHandlerName="PuestosAutorizadosRowChangeEventHandler" msprop:Generator_TableClassName="PuestosAutorizadosDataTable" msprop:Generator_TableVarName="tablePuestosAutorizados" msprop:Generator_RowDeletingName="PuestosAutorizadosRowDeleting" msprop:Generator_TablePropName="PuestosAutorizados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Autorizacion" msprop:Generator_UserColumnName="Autorizacion" msprop:Generator_ColumnVarNameInTable="columnAutorizacion" msprop:Generator_ColumnPropNameInRow="Autorizacion" msprop:Generator_ColumnPropNameInTable="AutorizacionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Puesto" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Puesto" msprop:Generator_ColumnVarNameInTable="columnPuesto" msprop:Generator_ColumnPropNameInRow="Puesto" msprop:Generator_ColumnPropNameInTable="PuestoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
